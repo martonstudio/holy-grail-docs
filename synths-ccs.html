@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Synths and CC assignment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">1 Setup</a></li>
+<li><a href="main-page.html">2 Main page</a></li>
+<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li><a href="sounds.html">4 Sounds</a></li>
+<li><a href="projects.html">5 Projects</a></li>
+<li><a href="engines.html">6 Synths and effects</a></li>
+<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li><a href="advanced.html">8 Advanced</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>3 Synths and CC assignment</h1>
+<h2>Open a synth page</h2>
+<p>On the main page, tap a part box to open its synth page. Turn pages with PREV and NEXT. Press RETURN to go back.</p>
+
+<h2>Knobs and CCs</h2>
+<p>This is the most important part.</p>
+<p>Each synth page has eight CC slots. A knob in a slot is moved by a CC from the Digitakt.</p>
+<p>By default the slots are CC 70 to 77. These are the eight encoders on the Digitakt's MIDI track. Turn an encoder and its knob in the app moves.</p>
+<p>Long press a knob to put it in a slot. A CC tag appears on it.</p>
+<p>Long press it again to take it out.</p>
+<p>If all eight slots are full, the app says so and changes nothing.</p>
+<p>Your slots stay when you load a sound. Changing the part's engine resets them to that engine's defaults.</p>
+
+
+<h2>Change a part's engine</h2>
+<ol>
+<li>Go to the setup page.</li>
+<li>Tap the part box.</li>
+<li>On the first page, pick an ENGINE.</li>
+</ol>
+<p>Engines:</p>
+<ul>
+<li>Synth One</li>
+<li>TB-303</li>
+<li>FM</li>
+<li>Sampler</li>
+</ul>
+
+<h2>The setup page</h2>
+<img src="img/setup-page.png" alt="The setup page">
+<p>The setup page shows the eight boxes: parts 1 to 4 (CH 9 to CH 12) and FX 5 to FX 8 (LOOPER, SPACE, DRIVE, HEAT). Each box shows its channel, its engine or effect and its CC numbers. The top strip has SETUP, SEND LOG and PROJECT.</p>
+<ol>
+<li>Tap a box.</li>
+<li>On its first page, set CHANNEL (1 to 16). On a part, set ENGINE here too.</li>
+<li>Press NEXT. Each slot has its own page: PART 1 SLOT 1 to SLOT 8, or FX n SLOT 1 to SLOT 8.</li>
+</ol>
+<p>A slot page:</p>
+<ul>
+<li>CONTROL: the control it moves.</li>
+<li>ENABLED: tap to switch the row on or off. Patterns keep each row's on and off.</li>
+<li>CC NUMBER: the number it answers to.</li>
+<li>RANGE: drag the ends to limit what the CC covers.</li>
+<li>CLEAR SLOT: removes the control.</li>
+</ul>
+<p>A slot with no control says to long press a control in the editor to attach it.</p>
+<p>A row cannot be enabled without a control. Two rows on one part cannot share a CC number.</p>
+<p>On the CH 16 box (HEAT), the slot pages also have MIXER LEVEL. It assigns a CC to a mixer level: PART 1 to 4, DIGITAKT or MASTER.</p>
+<!-- NOTE: plans/ios-instrument.md and the launch text: part channels default to 9-12. plans/ux-consistency.md says part channels "become editable"; the code already has a CHANNEL row. -->
+<!-- NOTE: CC numbers: the code accepts CC 0 to 119; plans/ux-consistency.md says a picker of 1-127. Not stated above. -->
+</body>
+</html>

@@ -9,20 +9,17 @@
 <body>
 <ul class="nav">
 <li><a href="index.html">Home</a></li>
-<li><a href="setup.html">Setup</a></li>
-<li><a href="basics.html">Basics</a></li>
-<li><a href="effects.html">Effects</a></li>
-<li><a href="synth-one.html">Synth One</a></li>
-<li><a href="tb-303.html">TB-303</a></li>
-<li><a href="fm.html">FM</a></li>
-<li><a href="sampler.html">Sampler</a></li>
-<li><a href="looper.html">Looper</a></li>
-<li><a href="recorders.html">Recorders</a></li>
-<li><a href="browsers.html">Browsers</a></li>
-<li><a href="settings.html">Settings</a></li>
+<li><a href="setup.html">1 Setup</a></li>
+<li><a href="main-page.html">2 Main page</a></li>
+<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li><a href="sounds.html">4 Sounds</a></li>
+<li><a href="projects.html">5 Projects</a></li>
+<li><a href="engines.html">6 Synths and effects</a></li>
+<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li><a href="advanced.html">8 Advanced</a></li>
 <li><a href="changelog.html">Changes</a></li>
 </ul>
-<h1>Sampler</h1>
+<h1>6 Sampler</h1>
 <p>The Sampler is one engine with four machines: KIT, GRAIN, STRETCH and SLICE. Every machine has a filter, an amp envelope and DLY SEND and REV SEND. Notes play the sampler. There is no sequencing.</p>
 <h2>Choose a machine</h2>
 <ol>
@@ -41,7 +38,7 @@
 <tr><td>STRETCH</td><td>PERF, FILTER, AMP, SAMPLE</td></tr>
 <tr><td>SLICE</td><td>SLICES, FILTER, AMP, MODE, SAMPLE</td></tr>
 </table>
-<p>FILTER: FILTER TYPE (MOOG or CCCP), CUTOFF, RESO, ENV AMT, and the filter envelope A, D, S, R. AMP: VOLUME, DLY SEND, REV SEND, the amp envelope A, D, S, R and a COLOR button. The <a href="browsers.html">sample browser</a> loads samples. Memory and length limits: <span class="todo">[TODO: sample length limits]</span></p>
+<p>FILTER: FILTER TYPE (MOOG or CCCP), CUTOFF, RESO, ENV AMT, and the filter envelope A, D, S, R. AMP: VOLUME, DLY SEND, REV SEND, the amp envelope A, D, S, R and a COLOR button. The <a href="#sample-browser">sample browser</a> loads samples. Memory and length limits: <span class="todo">[TODO: sample length limits]</span></p>
 <!-- TODO: plans/sampler.md: "Sample length and memory limits follow the Digitakt II; read them from its manual." The numbers are not written down. -->
 
 <h2>COLOR</h2>
@@ -65,10 +62,8 @@
 </ol>
 <p>Tap a loaded pad to select and play it. Drag on a pad to set its level. LOAD swaps the selected pad's sample. Tap the PAD 01 line to open the pad page.</p>
 <p>The pad page: waveform with START and LENGTH; direction FWD, BCK, LOOP FWD or LOOP BCK; dials TUNE, LEVEL, START, LENGTH, ATTACK, DECAY, CRUSH, DRIVE; buttons PLAY, LOAD, PADS. PREV and NEXT step through the pads.</p>
-<p>The kit shares one filter. ENV RESET on: every hit restarts the filter envelope. Off: it carries on across hits. <span class="todo">[TODO: where KIT's ENV RESET switch is]</span></p>
-<!-- TODO: plans/sampler.md settles a shared envelope reset for KIT; the KIT screens (V19-V22) have no ENV RESET control drawn. Only SLICE's MODE page shows ENV RESET. -->
-<p>KIT voices play each pad's own ATTACK and DECAY. The AMP page ADSR is not played by KIT. <span class="todo">[TODO: whether KIT's AMP envelope will act or go]</span></p>
-<!-- TODO: NEXT.md later list: "KIT's AMP page shows the part's ADSR, which KIT voices do not play: decide whether KIT's AMP envelope goes or acts." -->
+<p>The kit shares one filter.</p>
+<p>KIT voices play each pad's own ATTACK and DECAY. The AMP page ADSR is not played by KIT.</p>
 <p>A pad hit again starts over. Four notes can be held and eight voices can sound.</p>
 
 <h2>GRAIN</h2>
@@ -106,7 +101,6 @@
 <p>SLICE cuts a sample into 4, 8 or 16 equal slices. Each slice plays on its own MIDI note, in order, like KIT. Key N plays slice N. <span class="todo">[TODO: the note each key sends]</span></p>
 <!-- TODO: same KB FOLD note log as KIT. Until logged, slice N plays on ROOT NOTE + N - 1. -->
 <img src="img/sampler-slices.png" alt="SLICES page">
-<p>The drawing shows DLY SEND and REV SEND dials on this page. The app does not have them.</p>
 <ol>
 <li>On SAMPLE, load a sample.</li>
 <li>On SLICES, set the SLICES dial to 4, 8 or 16.</li>
@@ -125,5 +119,22 @@
 </table>
 <p>ENV RESET on: every hit restarts the filter envelope. Off: it carries on across hits. COLOR opens only in PITCH.</p>
 <p>There is no transient detection. Slice order follows key order. Where two markers meet, the earlier slice is empty and plays nothing.</p>
+
+<h2 id="sample-browser">Sample browser</h2>
+<p>The Sampler's SAMPLE page, and a KIT pad, open it.</p>
+<ol>
+<li>Pick a source tab: PHONE, RECORDINGS or DIGITAKT.</li>
+<li>Tap a row. A folder starts with &gt;. Press ENTER to open it. Press .. then ENTER to go up.</li>
+<li>Tap a file to hear its waveform and info.</li>
+<li>Press LOAD.</li>
+</ol>
+<img src="img/sample-browser.png" alt="The sample browser">
+<ul>
+<li>PHONE: the app's samples folder. The + IMPORT row at the top of the root opens iPhone Files and copies the file into the app.</li>
+<li>RECORDINGS: the audio recorder's takes.</li>
+<li>DIGITAKT: appears only when the connected device is a Digitakt and the transport is stopped. It is read-only. A sample is pulled into memory.</li>
+</ul>
+<p>From a KIT pad, BACK returns to the pad.</p>
+<p>A kit's 16 pad samples are saved with the sound.</p>
 </body>
 </html>

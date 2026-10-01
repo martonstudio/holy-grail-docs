@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Sounds and browsers</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">1 Setup</a></li>
+<li><a href="main-page.html">2 Main page</a></li>
+<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li><a href="sounds.html">4 Sounds</a></li>
+<li><a href="projects.html">5 Projects</a></li>
+<li><a href="engines.html">6 Synths and effects</a></li>
+<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li><a href="advanced.html">8 Advanced</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>4 Sounds and browsers</h1>
+<h2>Sound bank</h2>
+<p>Each project has a shared sound bank of 127 slots. All four parts use it.</p>
+<p>Load a slot by Program Change from the Digitakt. Program Change 0 loads slot 1. Program Change 126 loads slot 127.</p>
+<p>Or tap it in the app. On a synth page, the bar at the bottom has SOUNDS nnn, SAVE, BROWSE and RETURN.</p>
+<h2>SOUNDS list</h2>
+<p>Each part holds one Sound number from 1 to 127. A project has one Sound bank.</p>
+<ol>
+<li>Open a part's editor.</li>
+<li>Press SOUNDS nnn in the bottom bar.</li>
+<li>Tap a row to load that Sound into the part.</li>
+<li>Press PREV or NEXT, or drag the list, to see other rows. Seven rows show at a time.</li>
+<li>Press CLOSE to go back.</li>
+</ol>
+<img src="img/sounds.png" alt="The SOUNDS list">
+<p>A new project starts with four Sounds: 1 SYNTHONE, 2 FM, 3 303, 4 GRANULAR. The rest are empty. An empty row shows INIT and loads an INIT sound on the part's current engine.</p>
+<p>Save into a row:</p>
+<ol>
+<li>Press SAVE HERE on the row.</li>
+<li>On a filled row it asks SURE?. Press SURE? to overwrite.</li>
+</ol>
+<p>Rename: tap the name under CLOSE. Type on the keyboard. Press DONE. A rename reaches the Sound bank only when you save.</p>
+<p>A dot beside the name means the working sound has changed since it was loaded. A Sound that cannot be read shows SOUND N COULD NOT BE READ.</p>
+
+<h2>BROWSE</h2>
+<p>Presets are per engine and shared by all projects. They are factory presets plus your own.</p>
+<ol>
+<li>In a part's editor, press BROWSE.</li>
+<li>Tap a preset to load it into the part. The part keeps its Sound number and shows as modified until you save.</li>
+<li>Press DONE to go back.</li>
+</ol>
+<img src="img/presets.png" alt="The preset browser">
+<ul>
+<li>SEARCH: type part of a name to filter the list.</li>
+<li>SAVE AS PRESET: type a name to store the working sound as your own preset.</li>
+<li>Long press a user preset to rename or delete it. Factory presets are read-only.</li>
+</ul>
+<p>Presets and Sound bank entries are separate. SAVE AS PRESET writes a Preset. SAVE and SAVE HERE write the Sound bank.</p>
+
+
+<h2>Edit a patch</h2>
+<p>Move any knob on the synth page. A dot beside the name shows the working sound has changed. Your changes stay in the part until you save.</p>
+
+<h2>Save</h2>
+<ol>
+<li>Press SAVE in the bottom bar. It asks SURE?.</li>
+<li>Press SURE? to store the sound in the part's slot.</li>
+</ol>
+<p>Or press SAVE HERE on a row in SOUNDS to save into that row. To keep it as a preset, use SAVE AS PRESET in BROWSE.</p>
+</body>
+</html>

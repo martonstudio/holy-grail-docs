@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - The main page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">1 Setup</a></li>
+<li><a href="main-page.html">2 Main page</a></li>
+<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li><a href="sounds.html">4 Sounds</a></li>
+<li><a href="projects.html">5 Projects</a></li>
+<li><a href="engines.html">6 Synths and effects</a></li>
+<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li><a href="advanced.html">8 Advanced</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>2 The main page</h1>
+<p>The app has four main pages. Swipe between them: main page, setup page, mixer, recorder.</p>
+<img src="img/main-page.png" alt="The main page">
+<h2>What is on it</h2>
+<ul>
+<li>Top row: the four parts. Each box shows its channel (CH), the sound number and name, and a VOL fader. Tap a box to open its synth page. A dotted box is a part that is off.</li>
+<li>Bottom row: FX 5 to FX 8: LOOPER, SPACE, DRIVE and HEAT. Each box shows its channel and ON or OFF. Hold a box to bypass an effect or bring it back. A bypassed box shows BYP. Tap the LOOPER box to open the looper page.</li>
+<li>The playing pattern, A01 to H16, is shown large on the FX 8 box.</li>
+</ul>
+<p>The LOOPER box also shows the loop state. See <a href="looper.html">Looper</a>.</p>
+
+<h2 id="channels">Channels</h2>
+<p>Each box answers on one MIDI channel. Play a part from the Digitakt on its channel. Change a channel in the setup page. See <a href="synths-ccs.html">Synths and CC assignment</a>.</p>
+<table>
+<tr><th>Channel</th><th>Box</th></tr>
+<tr><td>9 to 12</td><td>Parts 1 to 4</td></tr>
+<tr><td>13</td><td>LOOPER</td></tr>
+<tr><td>14</td><td>SPACE</td></tr>
+<tr><td>15</td><td>DRIVE</td></tr>
+<tr><td>16</td><td>HEAT</td></tr>
+</table>
+
+<h2>Program Change</h2>
+<p>A Program Change on a part's channel loads a sound from the sound bank. Program Change 0 loads slot 1. Program Change 126 loads slot 127.</p>
+<p>A Program Change on the pattern channel selects a pattern. Program Change 0 is A01. Program Change 127 is H16. The default pattern channel is 16. It must match the Digitakt's PROG CHG OUT channel.</p>
+<p>The software follows the pattern changes of the Digitakt. See <a href="projects.html">Projects</a>.</p>
+
+<h2>CCs</h2>
+<p>Out of the box, every CC is set to the Elektron default, CC 70 to 77. Turn an encoder on the Digitakt and the knob in the app moves. All the LFOs work from the Digitakt. You can change any CC. See <a href="synths-ccs.html">Synths and CC assignment</a>.</p>
+</body>
+</html>

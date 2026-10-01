@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Recorder and mixer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">1 Setup</a></li>
+<li><a href="main-page.html">2 Main page</a></li>
+<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li><a href="sounds.html">4 Sounds</a></li>
+<li><a href="projects.html">5 Projects</a></li>
+<li><a href="engines.html">6 Synths and effects</a></li>
+<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li><a href="advanced.html">8 Advanced</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>7 Recorder and mixer</h1>
+<h2>Mixer</h2>
+<p>The mixer is the third main page, between the setup page and the recorder. It has six strips: the four parts, the Digitakt and master. Each strip has a level dial with its percent, a meter and a CLIP light.</p>
+<p>To move a mixer level with a CC, use MIXER LEVEL on the HEAT box. See <a href="synths-ccs.html">Synths and CC assignment</a>.</p>
+
+<h2>Recorder</h2>
+<p>The recorder is the fourth main page. Swipe to it from the mixer.</p>
+<img src="img/recorder.png" alt="The recorder page">
+<h3>Audio</h3>
+<p>Takes are stereo WAV files at the engine's sample rate. Names count up from REC0001.</p>
+<ol>
+<li>Press NEW. REC is armed with the next free name.</li>
+<li>Press REC.</li>
+<li>Press STOP. Only STOP ends a take.</li>
+<li>Press PLAY to hear it. The waveform scrubs.</li>
+</ol>
+<p>Rename: tap the name and type on the keyboard. DONE keeps it. A name already in use is refused: NAME IN USE.</p>
+<p>Trim:</p>
+<ol>
+<li>Press TRIM. Handles appear on the waveform. Drag them.</li>
+<li>Press TRIM again. It becomes SURE?.</li>
+<li>Press SURE?. The take is cut to the kept range. This replaces the file.</li>
+</ol>
+<p>SHARE sends the file as it is. DELETE asks SURE? the same way and names the take.</p>
+<p>The FILES list shows every take. Tap one to load it. Drag over the list to scroll it.</p>
+<!-- NOTE: the code scrolls the file list by dragging. plans/ux-consistency.md plans UP and DOWN buttons instead (drawing S21 V13). Written as the code. -->
+<p>REC DT: the Digitakt's level in the recording. Routing B only. In routing A the Digitakt is already in the output. The recording is the app's output plus the Digitakt at the RECORD DT level.</p>
+<p>A recording keeps running while you change pages. If the route changes during a take, the take is closed.</p>
+<p>Files are saved in the app's Documents/Recordings folder.</p>
+
+<h3>Video</h3>
+<ol>
+<li>Press VIDEO. The back camera turns on. The app's pages show over the picture. The first time, iOS asks for camera permission.</li>
+<li>Press REC.</li>
+<li>Press STOP.</li>
+</ol>
+<p>With VIDEO on, REC records one MOV: 1920x1080 at 30 fps, H.264, with the app's audio. It does not record the camera microphone. The file holds the camera picture, not the app's screen.</p>
+<p>The 1X button cycles through the back lenses. It does nothing while VIDEO is off or while recording.</p>
+<p>Video takes have no waveform and no TRIM. SHARE and DELETE work.</p>
+<p><span class="todo">[TODO: how to play back a video take in the app]</span></p>
+<!-- TODO: plans/master-video.md: "The recorder page supplies naming, browser, playback/scrubbing and sharing." The drawing shows a scrub rail only. No step-by-step for video playback. -->
+<p>An interrupted video take may be unusable. Stop the take before leaving the app.</p>
+<!-- NOTE: from plans/master-video.md "Interrupted takes can be unusable" (open reliability work). -->
+</body>
+</html>
