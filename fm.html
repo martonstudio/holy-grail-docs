@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - FM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">Setup</a></li>
+<li><a href="basics.html">Basics</a></li>
+<li><a href="effects.html">Effects</a></li>
+<li><a href="synth-one.html">Synth One</a></li>
+<li><a href="tb-303.html">TB-303</a></li>
+<li><a href="fm.html">FM</a></li>
+<li><a href="sampler.html">Sampler</a></li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="recorders.html">Recorders</a></li>
+<li><a href="browsers.html">Browsers</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>FM</h1>
+<p>The FM engine is a DX7-compatible voice. It has 16 voices.</p>
+<img src="img/fm-perf.png" alt="FM PERF page">
+<h2>Play</h2>
+<ol>
+<li>Tap a part set to FM on the display grid.</li>
+<li>Play notes from the Digitakt on the part's channel.</li>
+<li>Turn pages with PREV and NEXT.</li>
+</ol>
+<h2>Pages</h2>
+<ul>
+<li>PERF: the arrows beside the voice name step through the FM presets. VOLUME, CUTOFF, RESO, BRIGHT, MOD DECAY, FEEDBACK, ATTACK, RELEASE, LFO DEPTH, DLY SEND, REV SEND.</li>
+<li>FILTER: FILTER TYPE (MSFA, MOOG, CCCP), CUTOFF, RESO, ENV AMT, and the filter envelope A, D, S, R. In MSFA mode the filter envelope has no effect.</li>
+<li>OPS: six operator rows: OP, RATIO, LEVEL, ENVELOPE, DET, KVS, BREAK, CRV. Tap the OP number to switch an operator on or off. Tap an ENVELOPE to open EG for that operator. Tap KVS, BREAK or CRV to open SCALE for that operator.</li>
+<li>MOD: ALGORITHM (- and +), LFO (SPEED, DELAY, PMD, AMD, waveform, KEY SYNC), PITCH ENVELOPE.</li>
+<li>EG: operator selector, envelope with rate and level steppers.</li>
+<li>SCALE: operator selector and the scaling and sensitivity steppers.</li>
+</ul>
+<img src="img/fm-ops.png" alt="FM OPS page">
+<p>Sustain pedal (CC 64) holds released notes. Pitch bend, mod wheel, aftertouch and breath are ignored.</p>
+<p>Default CC 70 to 77: CUTOFF, RESO, BRIGHT, MOD DECAY, FEEDBACK, ATTACK, RELEASE, volume.</p>
+<p>Long press a knob to assign a CC.</p>
+<p><span class="todo">[TODO: how to load a DX7 .syx file in the app]</span></p>
+<!-- TODO: plans/lab-044-fm-synth.md describes BROWSE opening a .syx only for the standalone lab app. "Later, in HOLY_GRAIL: .syx import from Files on the phone" is not marked built. In the app BROWSE opens the FM Preset list. Confirm whether .syx import exists in the app. -->
+<p><span class="todo">[TODO: what BRIGHT, MOD DECAY and the other PERF knobs change in plain words]</span></p>
+<!-- TODO: the plans do not explain the PERF knobs. -->
+</body>
+</html>

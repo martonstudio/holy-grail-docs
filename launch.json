@@ -1,0 +1,10 @@
+{
+  "id": "build2-welcome",
+  "pages": [
+    "Welcome to the quest for the ultimate e-companion. Please set your Elektron Box to USB/MIDI (switch Overbridge off).",
+    "MIDI channels 9-16 control the instrument and FX slots by default. CC 70-77 control whatever you like. You can change this in the settings.",
+    "I have now added a few sampler engines due to popular demand.",
+    "I made some changes to the layouts so they look better on different phones. We have different skins now in the settings.",
+    "Please send me feedback with SEND LOG on the settings page. The quest needs it."
+  ]
+}

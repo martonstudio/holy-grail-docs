@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Sampler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">Setup</a></li>
+<li><a href="basics.html">Basics</a></li>
+<li><a href="effects.html">Effects</a></li>
+<li><a href="synth-one.html">Synth One</a></li>
+<li><a href="tb-303.html">TB-303</a></li>
+<li><a href="fm.html">FM</a></li>
+<li><a href="sampler.html">Sampler</a></li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="recorders.html">Recorders</a></li>
+<li><a href="browsers.html">Browsers</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>Sampler</h1>
+<p>The Sampler is one engine with four machines: KIT, GRAIN, STRETCH and SLICE. Every machine has a filter, an amp envelope and DLY SEND and REV SEND. Notes play the sampler. There is no sequencing.</p>
+<h2>Choose a machine</h2>
+<ol>
+<li>Tap a part set to SAMPLER on the display grid.</li>
+<li>Tap the machine name at the top left of the editor (it has an arrow). The MACHINE page opens.</li>
+<li>Tap KIT, GRAIN, STRETCH or SLICE.</li>
+<li>The app asks SURE?. Confirm to switch.</li>
+</ol>
+<p>Switching discards whatever was loaded. A machine change silences the part.</p>
+<img src="img/sampler-machines.png" alt="The MACHINE page">
+<p>Pages in each machine, turned with PREV and NEXT:</p>
+<table>
+<tr><th>Machine</th><th>Pages</th></tr>
+<tr><td>KIT</td><td>PADS, FILTER, AMP</td></tr>
+<tr><td>GRAIN</td><td>PERF, FILTER, AMP, SAMPLE</td></tr>
+<tr><td>STRETCH</td><td>PERF, FILTER, AMP, SAMPLE</td></tr>
+<tr><td>SLICE</td><td>SLICES, FILTER, AMP, MODE, SAMPLE</td></tr>
+</table>
+<p>FILTER: FILTER TYPE (MOOG or CCCP), CUTOFF, RESO, ENV AMT, and the filter envelope A, D, S, R. AMP: VOLUME, DLY SEND, REV SEND, the amp envelope A, D, S, R and a COLOR button. The <a href="browsers.html">sample browser</a> loads samples. Memory and length limits: <span class="todo">[TODO: sample length limits]</span></p>
+<!-- TODO: plans/sampler.md: "Sample length and memory limits follow the Digitakt II; read them from its manual." The numbers are not written down. -->
+
+<h2>COLOR</h2>
+<p>COLOR opens from the AMP page. On SLICE it also opens from the MODE page.</p>
+<ol>
+<li>Pick a MACHINE: CLEAN, SP, S950 or CRUSH.</li>
+<li>Set DRIVE.</li>
+<li>With CRUSH, set BITS and RATE.</li>
+</ol>
+<p>SP: grit and ring when pitched down. S950: darker and smoother. CRUSH: free bit depth (BITS 2 to 16) and sample rate (RATE 1 to 48 kHz). BITS and RATE only work on CRUSH.</p>
+<p>COLOR only works where the sample is read plainly: KIT, GRAIN in LONG SAMPLE, SLICE in PITCH. Elsewhere it is greyed out.</p>
+
+<h2>KIT</h2>
+<p>A drum kit of 16 pads. Notes play pads. Set KB FOLD on (Digitakt OS 1.40 or later). Then key 1 plays pad 1 and key 16 plays pad 16. <span class="todo">[TODO: the note each key sends]</span></p>
+<!-- TODO: plans/sampler.md and docs/sampler-test-sheet.md: the notes the Digitakt sends for keys 1-16 with KB FOLD on are not logged yet. Until then pad N plays on ROOT NOTE + N - 1. -->
+<img src="img/sampler-kit-pads.png" alt="KIT PADS page">
+<p>Load a pad:</p>
+<ol>
+<li>On PADS, tap an empty pad. The browser opens.</li>
+<li>Pick a sample and press LOAD.</li>
+</ol>
+<p>Tap a loaded pad to select and play it. Drag on a pad to set its level. LOAD swaps the selected pad's sample. Tap the PAD 01 line to open the pad page.</p>
+<p>The pad page: waveform with START and LENGTH; direction FWD, BCK, LOOP FWD or LOOP BCK; dials TUNE, LEVEL, START, LENGTH, ATTACK, DECAY, CRUSH, DRIVE; buttons PLAY, LOAD, PADS. PREV and NEXT step through the pads.</p>
+<p>The kit shares one filter. ENV RESET on: every hit restarts the filter envelope. Off: it carries on across hits. <span class="todo">[TODO: where KIT's ENV RESET switch is]</span></p>
+<!-- TODO: plans/sampler.md settles a shared envelope reset for KIT; the KIT screens (V19-V22) have no ENV RESET control drawn. Only SLICE's MODE page shows ENV RESET. -->
+<p>KIT voices play each pad's own ATTACK and DECAY. The AMP page ADSR is not played by KIT. <span class="todo">[TODO: whether KIT's AMP envelope will act or go]</span></p>
+<!-- TODO: NEXT.md later list: "KIT's AMP page shows the part's ADSR, which KIT voices do not play: decide whether KIT's AMP envelope goes or acts." -->
+<p>A pad hit again starts over. Four notes can be held and eight voices can sound.</p>
+
+<h2>GRAIN</h2>
+<p>PERF has a mode selector: GRANULAR, SINGLE CYCLE, LONG SAMPLE. Switching mode silences the part.</p>
+<img src="img/sampler-grain.png" alt="GRAIN PERF page">
+<ol>
+<li>Load a sample on the SAMPLE page.</li>
+<li>On PERF, pick a mode.</li>
+<li>Drag across the waveform to move POSITION (not in LONG SAMPLE).</li>
+</ol>
+<p>Dials, row 1: POSITION, SCAN, SPRAY, SIZE, DENSITY, ENV AMT. Row 2: VOLUME, PITCH, CUTOFF, RESO, DLY SEND, REV SEND. In LONG SAMPLE, row 1 is POSITION, START, END, SIZE, DENSITY, ENV AMT.</p>
+<table>
+<tr><th>Mode</th><th>What it does</th><th>Live dials</th></tr>
+<tr><td>GRANULAR</td><td>Plays the sample as grains.</td><td>All</td></tr>
+<tr><td>SINGLE CYCLE</td><td>POSITION picks one cycle of the sample and loops it. The note sets the pitch: A4 plays 440 Hz. PITCH offsets it.</td><td>POSITION, ENV AMT, PITCH</td></tr>
+<tr><td>LONG SAMPLE</td><td>Plays the sample plainly from START to END. A note plays from START and stops at END.</td><td>START, END, ENV AMT</td></tr>
+</table>
+<p>SCAN moves the read position through the sample. SPRAY gives each grain a random offset around it. In GRANULAR the waveform shows both.</p>
+<p>Greyed dials do not respond. COLOR on the AMP page works only in LONG SAMPLE.</p>
+
+<h2>STRETCH</h2>
+<p>STRETCH stretches a loaded sample to the beat, in whole bars, and keeps the pitch.</p>
+<ol>
+<li>Load a sample on the SAMPLE page. The app picks the nearest whole number of bars (1 to 8) at the current tempo.</li>
+<li>On PERF, set START and END on the waveform.</li>
+<li>Switch SYNC on to lock the length to the Digitakt's tempo. The STRETCH dial then sets BARS.</li>
+<li>With SYNC off, the STRETCH dial sets AMOUNT: 25 to 400 percent of the sample's own length.</li>
+<li>PITCH shifts the pitch without changing the length.</li>
+</ol>
+<p>Dials: START, END, STRETCH, PITCH, then VOLUME, CUTOFF, RESO, DLY SEND, REV SEND. The note pitches the grains.</p>
+<p><span class="todo">[TODO: how the sample sounds and its limits]</span></p>
+<!-- TODO: plans/sampler.md: plain grains are not phase-aligned. A stretched tone splits into sidebands (flutter on held notes) and loops measure 5 to 7 dB quieter. The user's listening test is open (NEXT.md). No user wording exists. -->
+
+<h2>SLICE</h2>
+<p>SLICE cuts a sample into 4, 8 or 16 equal slices. Each slice plays on its own MIDI note, in order, like KIT. Key N plays slice N. <span class="todo">[TODO: the note each key sends]</span></p>
+<!-- TODO: same KB FOLD note log as KIT. Until logged, slice N plays on ROOT NOTE + N - 1. -->
+<img src="img/sampler-slices.png" alt="SLICES page">
+<p>The drawing shows DLY SEND and REV SEND dials on this page. The app does not have them.</p>
+<ol>
+<li>On SAMPLE, load a sample.</li>
+<li>On SLICES, set the SLICES dial to 4, 8 or 16.</li>
+<li>Tap a slice to select it.</li>
+<li>Use the dials on the selected slice: POSITION (moves its start), ATTACK, DECAY, DRIVE, CRUSH.</li>
+<li>Drag the number under a slice up or down to set its amount.</li>
+<li>Long press the number to assign it a CC.</li>
+</ol>
+<p>The amount is in whole semitones in PITCH and PITCHSHIFT. It is a percent in TIMESTRETCH.</p>
+<p>The MODE page picks one mode for the whole machine:</p>
+<table>
+<tr><th>Mode</th><th>What it does</th></tr>
+<tr><td>PITCH</td><td>Plain repitch. A slice pitched up plays faster and shorter.</td></tr>
+<tr><td>PITCHSHIFT</td><td>Changes the pitch and keeps the length.</td></tr>
+<tr><td>TIMESTRETCH</td><td>Changes the length and keeps the pitch.</td></tr>
+</table>
+<p>ENV RESET on: every hit restarts the filter envelope. Off: it carries on across hits. COLOR opens only in PITCH.</p>
+<p>There is no transient detection. Slice order follows key order. Where two markers meet, the earlier slice is empty and plays nothing.</p>
+</body>
+</html>

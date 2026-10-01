@@ -1,0 +1,22 @@
+/* One stylesheet for every page. Change colours and sizes here. */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px;
+  color: #111;
+  background: #fff;
+}
+h1 { font-size: 28px; margin: 24px 0 12px; }
+h2 { font-size: 21px; margin: 28px 0 8px; border-bottom: 1px solid #ccc; }
+h3 { font-size: 17px; margin: 20px 0 6px; }
+ul.nav { list-style: none; margin: 0; padding: 0 0 8px; border-bottom: 2px solid #111; }
+ul.nav li { display: inline-block; margin: 0 12px 4px 0; }
+a { color: #0645ad; }
+img { max-width: 100%; height: auto; border: 1px solid #888; display: block; margin: 12px 0 4px; background: #000; }
+table { border-collapse: collapse; margin: 12px 0; }
+th, td { border: 1px solid #aaa; padding: 4px 8px; text-align: left; vertical-align: top; }
+th { background: #eee; }
+.todo { background: #fff3a8; padding: 0 4px; }

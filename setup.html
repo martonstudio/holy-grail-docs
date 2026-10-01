@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Setup</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">Setup</a></li>
+<li><a href="basics.html">Basics</a></li>
+<li><a href="effects.html">Effects</a></li>
+<li><a href="synth-one.html">Synth One</a></li>
+<li><a href="tb-303.html">TB-303</a></li>
+<li><a href="fm.html">FM</a></li>
+<li><a href="sampler.html">Sampler</a></li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="recorders.html">Recorders</a></li>
+<li><a href="browsers.html">Browsers</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>Setup</h1>
+<h2>Hardware</h2>
+<p>Confirmed working: Digitakt (mk1), Digitakt II.</p>
+<ul>
+<li>The app needs iOS 18 or later.</li>
+<li>The app supports 48 kHz only.</li>
+<li>USB cable: <span class="todo">[TODO: which USB cable]</span></li>
+<li>USB hubs: <span class="todo">[TODO: are hubs allowed, and which]</span></li>
+</ul>
+<!-- TODO: No plan, README or code says which USB cable to use between the Digitakt and the phone, or whether a hub works. -->
+
+<h2>Digitakt settings</h2>
+<ol>
+<li>Set the Digitakt to USB/MIDI mode. Switch OVERBRIDGE off.</li>
+<li>Set INT TO USB on.</li>
+<li>Set USB TO MAIN on.</li>
+<li>Routing A: set INT TO MAIN off. Routing B: set INT TO MAIN on.</li>
+<li>Set the Digitakt's PROG CHG OUT channel to the app's pattern channel. The default is 16.</li>
+</ol>
+<p>Default MIDI channels in the app:</p>
+<table>
+<tr><th>Channel</th><th>Box</th></tr>
+<tr><td>9 to 12</td><td>Parts 1 to 4</td></tr>
+<tr><td>13</td><td>LOOPER</td></tr>
+<tr><td>14</td><td>SPACE</td></tr>
+<tr><td>15</td><td>DRIVE</td></tr>
+<tr><td>16</td><td>HEAT</td></tr>
+</table>
+<p><span class="todo">[TODO: the other Digitakt MIDI settings: clock out, transport out, program change out, track channels]</span></p>
+<!-- TODO: The plans say the looper follows the Digitakt's clock and transport and that Program Change selects patterns and Sounds, but no document lists which Digitakt MIDI port settings must be switched on. Only the PROG CHG OUT channel is written down (plans/digitakt-model.md). -->
+<!-- TODO: Where in the Digitakt's menu the USB/MIDI, OVERBRIDGE, INT TO USB, USB TO MAIN and INT TO MAIN settings are. The app's launch text and plans/routing.md name them but give no menu path. -->
+
+<h2>Routing</h2>
+<p>The Digitakt sends one stereo mix to the app. It never sends single tracks.</p>
+<table>
+<tr><th>Routing</th><th>What happens</th></tr>
+<tr><td>A</td><td>The Digitakt goes through the phone with the synths, then FX, looper and master. It returns to the Digitakt MAIN over USB. If the app fails, the Digitakt is silent until you turn INT TO MAIN back on.</td></tr>
+<tr><td>B</td><td>The Digitakt plays dry at its own MAIN. Its USB audio reaches the phone for loop capture only. The phone returns synths, FX and loop. App FX never reach the dry Digitakt. B is the default.</td></tr>
+</table>
+<ol>
+<li>Tap SETUP at the top left of the setup page.</li>
+<li>On the AUDIO page, pick ROUTING A or B.</li>
+</ol>
+<img src="img/audio-settings.png" alt="The AUDIO settings page">
+
+<h2>Digitakt audio in</h2>
+<p>The app uses the Digitakt's USB audio as its input.</p>
+<p>MIC is off by default. With MIC off, any input that is not the Digitakt's USB audio reaches nothing: not the output, the looper or a recording.</p>
+<p>The AUDIO page has an INPUT GAIN slider and an INPUT RAW / PROCESSED switch. <span class="todo">[TODO: what INPUT RAW and PROCESSED do]</span></p>
+<!-- TODO: RAW / PROCESSED (and OTHER APPS SILENCE / MIX, BUFFER) are in the AUDIO page code but no plan explains them for users. -->
+
+<h2>Output to the Digitakt or Bluetooth</h2>
+<ol>
+<li>Open the AUDIO settings (tap SETUP on the setup page).</li>
+<li>Go to the TRACKS page with NEXT.</li>
+<li>Pick OUTPUT DIGITAKT or PHONE. The choice is remembered.</li>
+</ol>
+<p>DIGITAKT: the app plays into the Digitakt when it is connected. Plug the Digitakt back in and it plays again. Nothing to reset.</p>
+<p>PHONE: Digitakt audio in, output on Bluetooth headphones. The OUTPUT PHONE screen runs these steps:</p>
+<ol>
+<li>AUDIO STOPPED.</li>
+<li>Tap PICK HEADPHONES and choose your headphones in the system picker.</li>
+<li>AUDIO STARTED. The screen shows the route you actually got.</li>
+</ol>
+<p>CANCEL returns to DIGITAKT. The steps also run at launch. At launch the picker is skipped if the output is already Bluetooth.</p>
+<p>Changing the route during a performance does not run these steps. The app plays into whatever iOS gives.</p>
+<p>Off the Digitakt, the output carries the Digitakt at its RECORD DT level. In routing A you hear it once. A route change during a recording closes the recording.</p>
+</body>
+</html>

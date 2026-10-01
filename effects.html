@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Effects</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">Setup</a></li>
+<li><a href="basics.html">Basics</a></li>
+<li><a href="effects.html">Effects</a></li>
+<li><a href="synth-one.html">Synth One</a></li>
+<li><a href="tb-303.html">TB-303</a></li>
+<li><a href="fm.html">FM</a></li>
+<li><a href="sampler.html">Sampler</a></li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="recorders.html">Recorders</a></li>
+<li><a href="browsers.html">Browsers</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>Effects</h1>
+<p>Audio order: the send effects (SPACE, DRIVE), then the insert (HEAT), then the looper. Effect settings are saved in the pattern. Effects have no presets.</p>
+<p><span class="todo">[TODO: MASTER]</span></p>
+<!-- TODO: The request lists "SPACE, DRIVE, MASTER". No plan or code names an effect MASTER. The effects boxes are SPACE (FX 6), DRIVE (FX 7) and HEAT (FX 8). plans/digitakt-model.md says "master FX" in the pattern is still target, not built. The mixer has an MST (master) level strip. Confirm what MASTER means before writing it. -->
+
+<h2>SPACE</h2>
+<p>FX 6, MIDI channel 14. Delay, then reverb. A send effect: each part has a delay send and a reverb send.</p>
+<p>SPACE opens on its SENDS page. SETTINGS is the second tab.</p>
+<ol>
+<li>Tap the SPACE box on the display grid.</li>
+<li>On SENDS, set the DELAY SEND FROM EACH PART dials and the REVERB SEND FROM EACH PART dials (CH 9 to CH 12).</li>
+<li>Tap SETTINGS for the effect itself.</li>
+</ol>
+<p>DELAY: FDBK, TONE, CHAR (CLEAN, TAPE, BBD), MODE (SIMPLE, STEREO, PING PONG, MULTI TAP), TIME and TIME R, ON.</p>
+<p>REVERB: SIZE, DECAY, DAMP, PRE, MOD, ON.</p>
+<p>TAP sets where the send is taken: PRE FADER or POST FADER. SPACE is POST FADER by default.</p>
+<p>SERIAL off (default): delay and reverb run side by side. Each hears only its own send. SERIAL on: the delay output also feeds the reverb.</p>
+<img src="img/space-settings.png" alt="SPACE settings page">
+
+<h2>DRIVE</h2>
+<p>FX 7, MIDI channel 15. Drive and fuzz. A send effect with the same pages and tabs as SPACE: SENDS and SETTINGS.</p>
+<p>SENDS: DRIVE SEND FROM EACH PART and FUZZ SEND FROM EACH PART.</p>
+<p>DRIVE: DRIVE, TONE, LEVEL, CIRCUIT (TUBE), ON.</p>
+<p>FUZZ: DRIVE, TONE, LEVEL, CIRCUIT (FUZZ, OCTAVE, BITS, TUBE), ON.</p>
+<p>TAP is PRE FADER by default. SERIAL feeds the drive output into the fuzz.</p>
+<img src="img/drive-settings.png" alt="DRIVE settings page">
+
+<h2>HEAT</h2>
+<p>FX 8, MIDI channel 16. An insert effect. It processes the parts and the send returns together.</p>
+<ul>
+<li>DJ EQ AND FILTER: HIGH, MID, LOW, FILTER.</li>
+<li>DRIVE: DRIVE, TONE, CHARACTER, CIRCUIT (TUBE, TAPE, TRANSFORMER, CLEAN BOOST), GAIN, ON.</li>
+<li>BASS TO MONO: WIDTH, SLOPE, X-OVER, ON. It sums left and right below the crossover.</li>
+</ul>
+<p>The FILTER is the one master filter.</p>
+<img src="img/heat.png" alt="HEAT page">
+<p>Default CCs are on the <a href="basics.html">Basics</a> page.</p>
+</body>
+</html>

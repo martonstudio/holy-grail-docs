@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holy Grail - Settings</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="setup.html">Setup</a></li>
+<li><a href="basics.html">Basics</a></li>
+<li><a href="effects.html">Effects</a></li>
+<li><a href="synth-one.html">Synth One</a></li>
+<li><a href="tb-303.html">TB-303</a></li>
+<li><a href="fm.html">FM</a></li>
+<li><a href="sampler.html">Sampler</a></li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="recorders.html">Recorders</a></li>
+<li><a href="browsers.html">Browsers</a></li>
+<li><a href="settings.html">Settings</a></li>
+<li><a href="changelog.html">Changes</a></li>
+</ul>
+<h1>Settings</h1>
+<h2>CC and channel settings</h2>
+<img src="img/setup-page.png" alt="The setup page">
+<p>The setup page shows the eight boxes: parts 1 to 4 (CH 9 to CH 12) and FX 5 to FX 8 (LOOPER, SPACE, DRIVE, HEAT). Each box shows its channel, its engine or effect and its CC numbers. The top strip has SETUP (opens AUDIO), SEND LOG and PROJECT.</p>
+<ol>
+<li>Tap a box.</li>
+<li>On its first page, set CHANNEL (1 to 16). On a part, set ENGINE here too.</li>
+<li>Press NEXT. Each slot has its own page: PART 1 SLOT 1 to SLOT 8, or FX n SLOT 1 to SLOT 8.</li>
+</ol>
+<p>A slot page:</p>
+<ul>
+<li>CONTROL: the control it moves.</li>
+<li>ENABLED: tap to switch the row on or off. Patterns keep each row's on and off.</li>
+<li>CC NUMBER: the number it answers to.</li>
+<li>RANGE: drag the ends to limit what the CC covers.</li>
+<li>CLEAR SLOT: removes the control.</li>
+</ul>
+<p>A slot with no control says to long press a control in the editor to attach it.</p>
+<p>A row cannot be enabled without a control. Two rows on one part cannot share a CC number.</p>
+<p>COPY and PASTE (bottom right of the CH 16 box) copy a pattern. PASTE asks SURE?.</p>
+<p>On the CH 16 box (HEAT), the slot pages also have MIXER LEVEL. It assigns a CC to a mixer level: PART 1 to 4, DIGITAKT or MASTER.</p>
+<p>SEND LOG sends the app's log.</p>
+<!-- NOTE: plans/ios-instrument.md and the launch text: part channels default to 9-12. plans/ux-consistency.md says part channels "become editable"; the code already has a CHANNEL row. -->
+<!-- NOTE: CC numbers: the code accepts CC 0 to 119; plans/ux-consistency.md says a picker of 1-127. Not stated above. -->
+<!-- TODO: ux-consistency also lists a SKIN menu (seven colourways) on the AUDIO page. It is not in the dev code read. Add it to the AUDIO page section when it is built. -->
+
+<h2>Routing settings</h2>
+<img src="img/audio-settings.png" alt="The AUDIO page">
+<p>Tap SETUP on the setup page. The AUDIO sheet has four pages. Turn them with PREV and NEXT.</p>
+<h3>Page 1: AUDIO</h3>
+<ul>
+<li>BUFFER: 64, 128, 256 or 512 frames. Default 128. <span class="todo">[TODO: when to change it]</span></li>
+<li>ROUTING: A or B. Default B. See <a href="setup.html">Setup</a>.</li>
+<li>MIC: OFF or ON. Default OFF.</li>
+<li>OTHER APPS: SILENCE or MIX. <span class="todo">[TODO: what it does]</span></li>
+<li>INPUT: RAW or PROCESSED. <span class="todo">[TODO: what it does]</span></li>
+<li>INPUT GAIN: in dB, in half-dB steps.</li>
+</ul>
+<!-- TODO: BUFFER advice, OTHER APPS and INPUT RAW/PROCESSED have no user description in any plan. In code: OTHER APPS MIX sets the iOS mixWithOthers option; RAW uses the measurement audio-session mode. Not written as fact because the user effect is not documented. -->
+<h3>Page 2: AUDIO status</h3>
+<p>RUNNING (with sample rate and buffer), the Digitakt setting for the chosen routing, INPUT, OUTPUT, FORMAT, LATENCY, INPUT PEAK. An audio start error shows here.</p>
+<h3>Page 3: DIGITAKT TRACKS</h3>
+<ul>
+<li>PATTERN: the channel whose Program Change selects a pattern. Default 16. Match it to the Digitakt's PROG CHG OUT channel.</li>
+<li>T1 to T6: the Digitakt's track channels. The app sends CC 95 on them in routing B. Default 1 to 6.</li>
+</ul>
+<h3>Page 4: TRACKS</h3>
+<ul>
+<li>T7 and T8: the Digitakt's track channels. Default 7 and 8.</li>
+<li>DEMO SONG: STOP or PLAY. Plays a built-in four-part demo. <span class="todo">[TODO: what the demo song is for]</span></li>
+<li>OUTPUT: DIGITAKT or PHONE. See <a href="setup.html">Setup</a>.</li>
+</ul>
+<p>RECORD DT is on the recorder page. Routing: see <a href="recorders.html">Recorders</a>.</p>
+</body>
+</html>
