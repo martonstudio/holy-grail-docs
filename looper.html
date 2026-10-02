@@ -7,23 +7,32 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<ul class="nav">
-<li><a href="index.html">Home</a></li>
-<li><a href="setup.html">1 Setup</a></li>
-<li><a href="main-page.html">2 Main page</a></li>
-<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li><a href="sounds.html">4 Sounds</a></li>
-<li><a href="projects.html">5 Projects</a></li>
-<li><a href="engines.html">6 Synths and effects</a></li>
-<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li><a href="advanced.html">8 Advanced</a></li>
-<li><a href="changelog.html">Changes</a></li>
-</ul>
+<nav class="side"><ul>
+<li class="top"><a href="index.html">Home</a></li>
+<li class="top"><a href="setup.html">1 Setup</a></li>
+<li class="top"><a href="main-page.html">2 Main page</a></li>
+<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li class="top"><a href="sounds.html">4 Sounds</a></li>
+<li class="top"><a href="projects.html">5 Projects</a></li>
+<li class="top"><a href="engines.html">6 Synths and effects</a></li>
+<li class="sub"><a href="synth-one.html">Synth One</a></li>
+<li class="sub"><a href="tb-303.html">TB-303</a></li>
+<li class="sub"><a href="fm.html">FM</a></li>
+<li class="sub"><a href="sampler.html">Sampler</a></li>
+<li class="sub"><a href="effects.html">Effects</a></li>
+<li class="sub here"><a href="looper.html">Looper</a></li>
+<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li class="top"><a href="advanced.html">8 Advanced</a></li>
+<li class="top"><a href="changelog.html">Changes</a></li>
+</ul></nav>
+<main>
 <h1>6 Looper</h1>
 <p>The looper works like the Octatrack's. It records all the time. Turn it up and it locks the last loop.</p>
 <img src="img/looper.png" alt="The looper editor">
 <p>It lives on MIDI channel 13. Turn up DIAL 1 (CC 70) and the last loop plays. Turn it down and it starts recording again.</p>
 <p>A C note on channel 13 resets the bar, so the loop starts where you want. A pattern change does the same.</p>
 <p>The loop has a delay, a DJ-style EQ and filter, and a divider. Use it to hold the old pattern while you bring in the next one, then fade it out.</p>
+<div class="pager"><a href="effects.html">&larr; Effects</a><a href="recorder-mixer.html">7 Recorder and mixer &rarr;</a></div>
+</main>
 </body>
 </html>

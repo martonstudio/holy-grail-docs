@@ -7,51 +7,72 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<ul class="nav">
-<li><a href="index.html">Home</a></li>
-<li><a href="setup.html">1 Setup</a></li>
-<li><a href="main-page.html">2 Main page</a></li>
-<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li><a href="sounds.html">4 Sounds</a></li>
-<li><a href="projects.html">5 Projects</a></li>
-<li><a href="engines.html">6 Synths and effects</a></li>
-<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li><a href="advanced.html">8 Advanced</a></li>
-<li><a href="changelog.html">Changes</a></li>
-</ul>
+<nav class="side"><ul>
+<li class="top"><a href="index.html">Home</a></li>
+<li class="top"><a href="setup.html">1 Setup</a></li>
+<li class="top"><a href="main-page.html">2 Main page</a></li>
+<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li class="top"><a href="sounds.html">4 Sounds</a></li>
+<li class="top"><a href="projects.html">5 Projects</a></li>
+<li class="top"><a href="engines.html">6 Synths and effects</a></li>
+<li class="sub"><a href="synth-one.html">Synth One</a></li>
+<li class="sub"><a href="tb-303.html">TB-303</a></li>
+<li class="sub"><a href="fm.html">FM</a></li>
+<li class="sub"><a href="sampler.html">Sampler</a></li>
+<li class="sub"><a href="effects.html">Effects</a></li>
+<li class="sub"><a href="looper.html">Looper</a></li>
+<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li class="top"><a href="advanced.html">8 Advanced</a></li>
+<li class="top here"><a href="changelog.html">Changes</a></li>
+</ul></nav>
+<main>
 <h1>Changes</h1>
 
 <h2>Build 2</h2>
-
+<p><b>Note:</b> this build is a fresh start. Projects, sounds and settings from the first beta do not carry over.</p>
 <h3>New</h3>
 <ul>
 <li>SAMPLER engine with four machines: KIT (16 pads), GRAIN, STRETCH and SLICE.</li>
-<li>COLOR: CLEAN, SP, S950 and CRUSH lo-fi models, with DRIVE.</li>
-<li>Sample browser with PHONE, RECORDINGS and DIGITAKT. + IMPORT copies a file from iPhone Files.</li>
-<li>Pull samples from the Digitakt over USB, while its transport is stopped.</li>
+<li>Lo-fi models for the sampler: SP, S950 and CRUSH.</li>
+<li>The sample browser loads samples from your phone, your recordings, or straight from the Digitakt.</li>
+<li>Skins: seven colourways in the settings.</li>
 <li>A welcome message on first launch.</li>
-<li>DIAL VALUES in settings: each knob shows its value (0-127) in its centre.</li>
-<li>After the splash: the version, links to these docs and this page, and the contact address.</li>
 </ul>
-
-<h3>Changed</h3>
+<img src="img/sampler-machines.png" alt="The sampler's machines">
+<p>Two of the seven skins, PHOSPHOR and LCD:</p>
+<img src="img/skin-phosphor.png" alt="PHOSPHOR skin">
+<img src="img/skin-lcd.png" alt="LCD skin">
+<h3>You told us, we did it</h3>
 <ul>
-<li>Every volume control uses the Digitakt's volume curve. 100 is unity.</li>
-<li>CC assignments belong to the project. Loading a preset no longer changes them. Changing a part's engine resets them to that engine's defaults.</li>
-<li>Presets no longer store CC assignments.</li>
+<li>"Letters are cut off", "the Dynamic Island blocks stuff". The app now scales to fit every iPhone, clear of the rounded corners and the notch.</li>
+<li>"The interface needs common ways to navigate", "how do I get back from browse?" BACK is top left on every screen. PREV and NEXT turn every page. No more swiping.</li>
+<li>"CC mapping is lost when loading presets." Your CCs now belong to the project. Loading a sound never changes them.</li>
+<li>"It keeps listening to the microphone." It doesn't any more. The mic is off unless you turn MIC on and no Digitakt is connected.</li>
+<li>"Synth One's OSC selectors miss my taps." Fixed.</li>
+<li>"The knob needle turns the wrong way past halfway." Fixed.</li>
+<li>"Can the knobs show their values?" Yes. Turn on knob values in the settings.</li>
+<li>"The looped Digitakt audio is really quiet." The input and looper levels are reworked. The Digitakt now loops at the level it plays.</li>
+<li>"Is there a manual?" You're reading it. The Digitakt II is confirmed working.</li>
 </ul>
-
-<h3>Fixed</h3>
+<p>One layout on every screen, scaled as large as it fits and kept clear of the notch and the Dynamic Island. Illustration:</p>
+<img src="img/screen-fit.png" alt="The same screen on a smaller iPhone and on an iPhone with a Dynamic Island">
+<h3>Other changes and fixes</h3>
 <ul>
-<li>The app no longer uses the microphone, unless MIC is ON in settings and no Digitakt is connected.</li>
-<li>Synth One's OSC 1 and OSC 2 selectors pick the segment you tap.</li>
-<li>Master level now starts at unity.</li>
+<li>Volume and gain staging improvements.</li>
+<li>Changing a part's engine resets its CCs to that engine's defaults. Presets no longer store CCs.</li>
+<li>Resetting the looper with a C note no longer changes the divider.</li>
+<li>Redesigned screens: one header size, new SOUNDS and BROWSE, a CC number picker, editable part channels.</li>
+<li>The master volume now starts at the right level.</li>
 </ul>
-
-<h3>Note</h3>
+<h2>Coming next</h2>
+<p>Plans, not promises:</p>
 <ul>
-<li>Projects and presets from build 1 are replaced on update.</li>
-<li>Custom CC assignments from build 1 are reset to the defaults.</li>
+<li>A master compressor.</li>
+<li>A limiter on each channel.</li>
+<li>Granular effects.</li>
+<li>We are considering a separate design for the iPad.</li>
 </ul>
+<div class="pager"><a href="advanced.html">&larr; 8 Advanced</a><span></span></div>
+</main>
 </body>
 </html>

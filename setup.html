@@ -7,19 +7,27 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<ul class="nav">
-<li><a href="index.html">Home</a></li>
-<li><a href="setup.html">1 Setup</a></li>
-<li><a href="main-page.html">2 Main page</a></li>
-<li><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li><a href="sounds.html">4 Sounds</a></li>
-<li><a href="projects.html">5 Projects</a></li>
-<li><a href="engines.html">6 Synths and effects</a></li>
-<li><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li><a href="advanced.html">8 Advanced</a></li>
-<li><a href="changelog.html">Changes</a></li>
-</ul>
+<nav class="side"><ul>
+<li class="top"><a href="index.html">Home</a></li>
+<li class="top here"><a href="setup.html">1 Setup</a></li>
+<li class="top"><a href="main-page.html">2 Main page</a></li>
+<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
+<li class="top"><a href="sounds.html">4 Sounds</a></li>
+<li class="top"><a href="projects.html">5 Projects</a></li>
+<li class="top"><a href="engines.html">6 Synths and effects</a></li>
+<li class="sub"><a href="synth-one.html">Synth One</a></li>
+<li class="sub"><a href="tb-303.html">TB-303</a></li>
+<li class="sub"><a href="fm.html">FM</a></li>
+<li class="sub"><a href="sampler.html">Sampler</a></li>
+<li class="sub"><a href="effects.html">Effects</a></li>
+<li class="sub"><a href="looper.html">Looper</a></li>
+<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li class="top"><a href="advanced.html">8 Advanced</a></li>
+<li class="top"><a href="changelog.html">Changes</a></li>
+</ul></nav>
+<main>
 <h1>1 Setup</h1>
+<img src="img/welcome.png" alt="The welcome message">
 <p>Holy Grail is a companion app for the Digitakt. It adds four synths, effects, a looper and a recorder to your box.</p>
 <h2>Connect</h2>
 <p>One USB cable does everything, audio and MIDI. A newer iPhone takes a USB-C to USB-B cable, the printer kind. An older iPhone takes a Lightning to USB adapter. The official Apple one works best.</p>
@@ -31,8 +39,7 @@
 <li>INT TO MAIN: OFF for routing A, ON for routing B. B is the default. See <a href="advanced.html#routing">Advanced</a>.</li>
 </ol>
 <p>The app listens on MIDI channels 9 to 16. See <a href="main-page.html#channels">the main page</a>.</p>
-<h2>First launch</h2>
-<p>A welcome message shows once. Then the info screen: version, docs, changes and contact. Press PLAY.</p>
-<img src="img/audio-settings.png" alt="The AUDIO settings page">
+<div class="pager"><a href="index.html">&larr; Home</a><a href="main-page.html">2 Main page &rarr;</a></div>
+</main>
 </body>
 </html>
