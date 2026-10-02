@@ -20,58 +20,14 @@
 <li><a href="changelog.html">Changes</a></li>
 </ul>
 <h1>6 Looper</h1>
-<p>The looper is FX 5, on MIDI channel 13. It records the finished mix with the effects and plays the loop back after everything else. The Digitakt's clock and transport drive it. It has no clock of its own.</p>
+<p>The looper is on channel 13. It records the finished mix, effects included, and plays the loop back last. It follows the Digitakt's clock and transport.</p>
 <img src="img/looper.png" alt="The looper editor">
-<h2>Controls</h2>
-<ul>
-<li>DIAL 1 (LOOP): volume of the locked loop. Default CC 70.</li>
-<li>DIAL 2 (INPUT): volume of everything played live. No default CC.</li>
-<li>LINK: when on, moving DIAL 1 also sets DIAL 2 to 100 minus DIAL 1 (floored at zero). Unlinking leaves both where they are.</li>
-<li>BARS: the loop length. The menu has 1, 2, 4 and 8 bars.</li>
-<li>EQ: HIGH, MID, LOW, FILTER (default CC 74 to 77).</li>
-<li>DLY REV: DLY (CC 72) and REV. SETUP opens LOOPER SPACE.</li>
-<li>FX C: OFF, LOOP DIVIDER or STUTTER. DIVIDE is CC 73.</li>
-</ul>
-<!-- NOTE: plans/looper-controls.md says loop length is "whole bars, 1-8". The code menu offers 1, 2, 4, 8 (LooperModule.lengthBars). Written as the code. -->
-<!-- NOTE: the plan says FX A and FX B and their TYPE menus are gone; STUTTER / OFF types for FX C are in the code (cutTypes) but not described in the plan. -->
 <h2>Make a loop</h2>
 <ol>
-<li>Run the Digitakt. Capture starts from the first clock pulse.</li>
-<li>Set DIAL 1 to zero. The looper keeps the latest complete bars.</li>
-<li>Wait until the box shows LOOP READY (N complete bars held).</li>
-<li>Move DIAL 1 above zero. The loop locks and plays. The box shows LOOP PLAY.</li>
+<li>Run the Digitakt. The looper keeps the latest complete bars. BARS sets the length.</li>
+<li>When the box shows LOOP READY, move DIAL 1 (LOOP, default CC 70) above zero. The loop locks and plays.</li>
+<li>Move DIAL 1 back to zero to clear it and start a fresh capture.</li>
 </ol>
-<p>Further DIAL 1 moves only change the loop volume.</p>
-<ol>
-<li>Move DIAL 1 back to zero. The loop fades out and clears. Capture starts fresh.</li>
-</ol>
-<p>After a clear, DIAL 1 is refused until N new complete bars are captured. Live stays audible. Return DIAL 1 to zero first.</p>
-<p>The loop is what you hear after DIAL 2. Nothing is captured while a loop is locked. The app's own USB return is never captured.</p>
-<h2>Box words</h2>
-<table>
-<tr><th>Word</th><th>Meaning</th></tr>
-<tr><td>LOOP REC (flashing)</td><td>Capturing, not ready</td></tr>
-<tr><td>LOOP READY</td><td>N bars held</td></tr>
-<tr><td>LOOP PLAY</td><td>A loop is locked. The divider division shows beside it: 1/1 to 1/32 or FREEZE.</td></tr>
-<tr><td>RESET</td><td>Bar 1 was just set (about a quarter second)</td></tr>
-</table>
-<h2>Bar 1</h2>
-<p>Three things set bar 1, each to the nearest beat. Each starts a fresh capture:</p>
-<ul>
-<li>Start.</li>
-<li>The Program Change on the pattern channel.</li>
-<li>The loop key: any note C1 to C5 on the looper's MIDI channel.</li>
-</ul>
-<p>While a loop is locked, none of them touches it.</p>
-<p>Stop fades the loop out. A second Stop while stopped is a panic. A tempo change resamples the loop, so its pitch changes. There is no overdub.</p>
-<h2>DLY and REV</h2>
-<p>DLY: how much of the loop goes through the delay and reverb instead of dry. 0 is dry. 1 is effect only.</p>
-<p>REV: how much of the delay feeds the reverb. 0 is clean echoes. 1 is echoes heard only through the reverb.</p>
-<p>DLY and REV return to 0 when the loop clears. SETUP opens the delay and reverb settings. They do not change the SPACE box.</p>
-<img src="img/looper-space.png" alt="LOOPER SPACE page">
-<h2>Routing</h2>
-<p>Routing A: DIAL 2 is one gain on everything live, the Digitakt included.</p>
-<p>Routing B: DIAL 2 sets the phone's synths and also sends its level as CC 95 on the Digitakt track channels (default 1 to 8). DIAL 1 alone sends nothing. If CC 95 lowered the Digitakt's track levels, unplugging does not restore them. Restore them by hand.</p>
-<p>Start, Stop and Program Change never change DIAL 2. A pattern change never replaces a locked loop.</p>
+<p>DIAL 2 is the level of what you play live. Stop fades the loop out. There is no overdub.</p>
 </body>
 </html>

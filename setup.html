@@ -20,31 +20,20 @@
 <li><a href="changelog.html">Changes</a></li>
 </ul>
 <h1>1 Setup</h1>
-<h2>Cables</h2>
-<p>One USB cable runs from the Digitakt to the phone. An iPhone with a Lightning port needs a dongle.</p>
-<ul>
-<li>USB cable: <span class="todo">[TODO: which USB cable]</span></li>
-<li>USB hubs: <span class="todo">[TODO: are hubs allowed, and which]</span></li>
-</ul>
-<!-- TODO: No plan, README or code says which USB cable to use between the Digitakt and the phone, or whether a hub works. -->
+<h2>Connect</h2>
+<p>One USB data cable runs from the Digitakt to the iPhone. A newer iPhone (USB-C) takes a USB-C to USB-B cable, the printer-style one. An older iPhone (Lightning) takes a data adapter such as Apple's Lightning to USB 3 Camera Adapter. The official Apple one is best.</p>
 <p>Confirmed working: Digitakt (mk1), Digitakt II. The app needs iOS 18 or later. It supports 48 kHz only.</p>
 
 <h2>Digitakt settings</h2>
 <ol>
-<li>Set the Digitakt to USB/MIDI mode. Switch OVERBRIDGE off.</li>
-<li>Set INT TO USB on.</li>
-<li>Set USB TO MAIN on.</li>
-<li>Routing A: set INT TO MAIN off. Routing B: set INT TO MAIN on. See <a href="advanced.html#routing">Advanced</a>. B is the default.</li>
-<li>Set the Digitakt's PROG CHG OUT channel to the app's pattern channel. The default is 16.</li>
+<li>AUDIO: USB+MIDI mode (not OVERBRIDGE).</li>
+<li>INT TO USB: ON.</li>
+<li>Routing A: INT TO MAIN OFF. Routing B: INT TO MAIN ON. B is the default. See <a href="advanced.html#routing">Advanced</a>.</li>
+<li>MIDI: the Digitakt's MIDI CONFIG sets its channels and ports. The app listens on channels 9 to 16 (parts and effects) and CC 70 to 77 are free. See <a href="main-page.html#channels">The main page</a>.</li>
 </ol>
-<p>Set the Digitakt's MIDI channels to match the app. See <a href="main-page.html#channels">The main page</a>.</p>
-<p><span class="todo">[TODO: the other Digitakt MIDI settings: clock out, transport out, program change out, track channels]</span></p>
-<!-- TODO: The plans say the looper follows the Digitakt's clock and transport and that Program Change selects patterns and Sounds, but no document lists which Digitakt MIDI port settings must be switched on. Only the PROG CHG OUT channel is written down (plans/digitakt-model.md). -->
-<!-- TODO: Where in the Digitakt's menu the USB/MIDI, OVERBRIDGE, INT TO USB, USB TO MAIN and INT TO MAIN settings are. The app's launch text and plans/routing.md name them but give no menu path. -->
 
 <h2>First launch</h2>
-<p>A welcome message shows on first launch. After the splash the app shows the version, links to these docs and the contact address.</p>
+<p>A welcome message shows once. After the splash an info screen shows the version, DOCS and CHANGES buttons and the contact address. Press PLAY to start.</p>
 <img src="img/audio-settings.png" alt="The AUDIO settings page">
-<p>The app uses the Digitakt's USB audio as its input. MIC is off by default. See <a href="advanced.html">Advanced</a>.</p>
 </body>
 </html>

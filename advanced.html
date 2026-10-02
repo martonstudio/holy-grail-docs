@@ -20,60 +20,28 @@
 <li><a href="changelog.html">Changes</a></li>
 </ul>
 <h1>8 Advanced settings</h1>
+<p>Tap SETUP on the setup page to open the AUDIO sheet. It has four pages. PREV and NEXT turn them. BACK, top left, leaves it.</p>
+<img src="img/audio-settings.png" alt="The AUDIO page">
+
 <h2 id="routing">Routing</h2>
-<p>The Digitakt sends one stereo mix to the app. It never sends single tracks.</p>
+<p>The Digitakt sends one stereo mix to the app.</p>
 <table>
 <tr><th>Routing</th><th>What happens</th></tr>
-<tr><td>A</td><td>The Digitakt goes through the phone with the synths, then FX, looper and master. It returns to the Digitakt MAIN over USB. If the app fails, the Digitakt is silent until you turn INT TO MAIN back on.</td></tr>
-<tr><td>B</td><td>The Digitakt plays dry at its own MAIN. Its USB audio reaches the phone for loop capture only. The phone returns synths, FX and loop. App FX never reach the dry Digitakt. B is the default. If the phone is disconnected, runs out of battery or the app crashes, the Digitakt keeps playing.</td></tr>
+<tr><td>A</td><td>The Digitakt goes through the phone with the synths, FX, looper and master, and returns to the Digitakt over USB. Set INT TO MAIN off. If the app fails, the Digitakt is silent until you turn INT TO MAIN back on.</td></tr>
+<tr><td>B</td><td>The Digitakt plays dry at its own MAIN. The phone adds synths, FX and loop. Set INT TO MAIN on. If the phone disconnects, the Digitakt keeps playing. B is the default.</td></tr>
 </table>
-<p>Tap SETUP on the setup page. On the AUDIO page, pick ROUTING A or B.</p>
-<p>The app uses the Digitakt's USB audio as its input. MIC is off by default. With MIC off, any input that is not the Digitakt's USB audio reaches nothing: not the output, the looper or a recording.</p>
 
-<h2 id="output">Bluetooth and phone output</h2>
-<ol>
-<li>Open the AUDIO settings (tap SETUP on the setup page).</li>
-<li>Go to the TRACKS page with NEXT.</li>
-<li>Pick OUTPUT DIGITAKT or PHONE. The choice is remembered.</li>
-</ol>
-<p>DIGITAKT: the app plays into the Digitakt when it is connected. Plug the Digitakt back in and it plays again. Nothing to reset.</p>
-<p>PHONE: Digitakt audio in, output on Bluetooth headphones. The OUTPUT PHONE screen runs these steps:</p>
-<ol>
-<li>AUDIO STOPPED.</li>
-<li>Tap PICK HEADPHONES and choose your headphones in the system picker.</li>
-<li>AUDIO STARTED. The screen shows the route you actually got.</li>
-</ol>
-<p>CANCEL returns to DIGITAKT. The steps also run at launch. At launch the picker is skipped if the output is already Bluetooth.</p>
-<p>Changing the route during a performance does not run these steps. The app plays into whatever iOS gives.</p>
-<p>Off the Digitakt, the output carries the Digitakt at its RECORD DT level. In routing A you hear it once. A route change during a recording closes the recording.</p>
-
-<h2>MIDI and AUDIO pages</h2>
-<img src="img/audio-settings.png" alt="The AUDIO page">
-<p>Tap SETUP on the setup page. The AUDIO sheet has four pages. Turn them with PREV and NEXT.</p>
-<h3>Page 1: AUDIO</h3>
+<h2>AUDIO pages</h2>
 <ul>
-<li>BUFFER: 64, 128, 256 or 512 frames. Default 128. <span class="todo">[TODO: when to change it]</span></li>
-<li>ROUTING: A or B. Default B. See above.</li>
-<li>MIC: OFF or ON. Default OFF.</li>
-<li>OTHER APPS: SILENCE or MIX. <span class="todo">[TODO: what it does]</span></li>
-<li>INPUT: RAW or PROCESSED. <span class="todo">[TODO: what it does]</span></li>
-<li>INPUT GAIN: in dB, in half-dB steps.</li>
+<li>SKIN: the colours of the display.</li>
+<li>BUFFER: lower = less latency.</li>
+<li>OTHER APPS: MIX lets other apps play alongside. SILENCE does not.</li>
+<li>INPUT: RAW (default) turns off iOS's own input processing. PROCESSED leaves it on.</li>
+<li>MIC: off by default. With MIC off, only the Digitakt's USB audio is used as input.</li>
+<li>DIGITAKT TRACKS and TRACKS: the Digitakt's MIDI channels. PATTERN must match the Digitakt's PROG CHG OUT channel (default 16).</li>
+<li>DIAL VALUES: shows each knob's value in its centre.</li>
+<li>OUTPUT: DIGITAKT or PHONE. PHONE plays to Bluetooth headphones; follow the on-screen steps to pick them.</li>
 </ul>
-<!-- TODO: BUFFER advice, OTHER APPS and INPUT RAW/PROCESSED have no user description in any plan. In code: OTHER APPS MIX sets the iOS mixWithOthers option; RAW uses the measurement audio-session mode. Not written as fact because the user effect is not documented. -->
-<h3>Page 2: AUDIO status</h3>
-<p>RUNNING (with sample rate and buffer), the Digitakt setting for the chosen routing, INPUT, OUTPUT, FORMAT, LATENCY, INPUT PEAK. An audio start error shows here.</p>
-<h3>Page 3: DIGITAKT TRACKS</h3>
-<ul>
-<li>PATTERN: the channel whose Program Change selects a pattern. Default 16. Match it to the Digitakt's PROG CHG OUT channel.</li>
-<li>T1 to T6: the Digitakt's track channels. The app sends CC 95 on them in routing B. Default 1 to 6.</li>
-</ul>
-<h3>Page 4: TRACKS</h3>
-<ul>
-<li>T7 and T8: the Digitakt's track channels. Default 7 and 8.</li>
-<li>DEMO SONG: STOP or PLAY. Plays a built-in four-part demo. <span class="todo">[TODO: what the demo song is for]</span></li>
-<li>OUTPUT: DIGITAKT or PHONE. See above.</li>
-</ul>
-<p>RECORD DT is on the recorder page. Routing: see above.</p>
-<p>SEND LOG, at the top of the setup page, sends the app's log.</p>
+<p>SEND LOG at the top of the setup page sends the app's log.</p>
 </body>
 </html>
