@@ -19,29 +19,15 @@
 <li><a href="advanced.html">8 Advanced</a></li>
 <li><a href="changelog.html">Changes</a></li>
 </ul>
-<h1>8 Advanced settings</h1>
-<p>Tap SETUP on the setup page to open the AUDIO sheet. It has four pages. PREV and NEXT turn them. BACK, top left, leaves it.</p>
+<h1>8 Advanced</h1>
+<p>SETUP on the setup page opens the audio settings.</p>
 <img src="img/audio-settings.png" alt="The AUDIO page">
-
 <h2 id="routing">Routing</h2>
-<p>The Digitakt sends one stereo mix to the app.</p>
-<table>
-<tr><th>Routing</th><th>What happens</th></tr>
-<tr><td>A</td><td>The Digitakt goes through the phone with the synths, FX, looper and master, and returns to the Digitakt over USB. Set INT TO MAIN off. If the app fails, the Digitakt is silent until you turn INT TO MAIN back on.</td></tr>
-<tr><td>B</td><td>The Digitakt plays dry at its own MAIN. The phone adds synths, FX and loop. Set INT TO MAIN on. If the phone disconnects, the Digitakt keeps playing. B is the default.</td></tr>
-</table>
-
-<h2>AUDIO pages</h2>
-<ul>
-<li>SKIN: the colours of the display.</li>
-<li>BUFFER: lower = less latency.</li>
-<li>OTHER APPS: MIX lets other apps play alongside. SILENCE does not.</li>
-<li>INPUT: RAW (default) turns off iOS's own input processing. PROCESSED leaves it on.</li>
-<li>MIC: off by default. With MIC off, only the Digitakt's USB audio is used as input.</li>
-<li>DIGITAKT TRACKS and TRACKS: the Digitakt's MIDI channels. PATTERN must match the Digitakt's PROG CHG OUT channel (default 16).</li>
-<li>DIAL VALUES: shows each knob's value in its centre.</li>
-<li>OUTPUT: DIGITAKT or PHONE. PHONE plays to Bluetooth headphones; follow the on-screen steps to pick them.</li>
-</ul>
-<p>SEND LOG at the top of the setup page sends the app's log.</p>
+<p><b>B, parallel (default).</b> The Digitakt plays as normal. The app adds everything on top. If the phone disconnects, runs out of battery or the app crashes, the Digitakt keeps playing.</p>
+<p><b>A, round trip.</b> Everything goes through the phone.</p>
+<h2>Bluetooth</h2>
+<p>Away from the studio? Set OUTPUT to PHONE and play into Bluetooth headphones.</p>
+<h2>Also here</h2>
+<p>Skins, buffer size, mic, MIDI channels, and DIAL VALUES to show numbers on the knobs. SEND LOG sends me your log. Please do.</p>
 </body>
 </html>

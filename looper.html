@@ -20,14 +20,10 @@
 <li><a href="changelog.html">Changes</a></li>
 </ul>
 <h1>6 Looper</h1>
-<p>The looper is on channel 13. It records the finished mix, effects included, and plays the loop back last. It follows the Digitakt's clock and transport.</p>
+<p>The looper works like the Octatrack's. It records all the time. Turn it up and it locks the last loop.</p>
 <img src="img/looper.png" alt="The looper editor">
-<h2>Make a loop</h2>
-<ol>
-<li>Run the Digitakt. The looper keeps the latest complete bars. BARS sets the length.</li>
-<li>When the box shows LOOP READY, move DIAL 1 (LOOP, default CC 70) above zero. The loop locks and plays.</li>
-<li>Move DIAL 1 back to zero to clear it and start a fresh capture.</li>
-</ol>
-<p>DIAL 2 is the level of what you play live. Stop fades the loop out. There is no overdub.</p>
+<p>It lives on MIDI channel 13. Turn up DIAL 1 (CC 70) and the last loop plays. Turn it down and it starts recording again.</p>
+<p>A C note on channel 13 resets the bar, so the loop starts where you want. A pattern change does the same.</p>
+<p>The loop has a delay, a DJ-style EQ and filter, and a divider. Use it to hold the old pattern while you bring in the next one, then fade it out.</p>
 </body>
 </html>

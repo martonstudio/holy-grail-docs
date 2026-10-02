@@ -20,20 +20,19 @@
 <li><a href="changelog.html">Changes</a></li>
 </ul>
 <h1>1 Setup</h1>
+<p>Holy Grail is a companion app for the Digitakt. It adds four synths, effects, a looper and a recorder to your box.</p>
 <h2>Connect</h2>
-<p>One USB data cable runs from the Digitakt to the iPhone. A newer iPhone (USB-C) takes a USB-C to USB-B cable, the printer-style one. An older iPhone (Lightning) takes a data adapter such as Apple's Lightning to USB 3 Camera Adapter. The official Apple one is best.</p>
-<p>Confirmed working: Digitakt (mk1), Digitakt II. The app needs iOS 18 or later. It supports 48 kHz only.</p>
-
+<p>One USB cable does everything, audio and MIDI. A newer iPhone takes a USB-C to USB-B cable, the printer kind. An older iPhone takes a Lightning to USB adapter. The official Apple one works best.</p>
+<p>Tested with the Digitakt and the Digitakt II. You need iOS 18 or later.</p>
 <h2>Digitakt settings</h2>
 <ol>
-<li>AUDIO: USB+MIDI mode (not OVERBRIDGE).</li>
+<li>AUDIO: USB+MIDI mode. Overbridge off.</li>
 <li>INT TO USB: ON.</li>
-<li>Routing A: INT TO MAIN OFF. Routing B: INT TO MAIN ON. B is the default. See <a href="advanced.html#routing">Advanced</a>.</li>
-<li>MIDI: the Digitakt's MIDI CONFIG sets its channels and ports. The app listens on channels 9 to 16 (parts and effects) and CC 70 to 77 are free. See <a href="main-page.html#channels">The main page</a>.</li>
+<li>INT TO MAIN: OFF for routing A, ON for routing B. B is the default. See <a href="advanced.html#routing">Advanced</a>.</li>
 </ol>
-
+<p>The app listens on MIDI channels 9 to 16. See <a href="main-page.html#channels">the main page</a>.</p>
 <h2>First launch</h2>
-<p>A welcome message shows once. After the splash an info screen shows the version, DOCS and CHANGES buttons and the contact address. Press PLAY to start.</p>
+<p>A welcome message shows once. Then the info screen: version, docs, changes and contact. Press PLAY.</p>
 <img src="img/audio-settings.png" alt="The AUDIO settings page">
 </body>
 </html>
