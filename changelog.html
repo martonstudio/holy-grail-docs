@@ -16,36 +16,53 @@
 <li class="top"><a href="projects.html">5 Projects</a></li>
 <li class="top"><a href="engines.html">6 Synths and effects</a></li>
 <li class="sub"><a href="synth-one.html">Synth One</a></li>
-<li class="sub"><a href="tb-303.html">TB-303</a></li>
+<li class="sub"><a href="holy-acid.html">HOLY_ACID</a></li>
 <li class="sub"><a href="fm.html">FM</a></li>
 <li class="sub"><a href="sampler.html">Sampler</a></li>
+<li class="sub"><a href="samples.html">Samples</a></li>
 <li class="sub"><a href="effects.html">Effects</a></li>
 <li class="sub"><a href="looper.html">Looper</a></li>
 <li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
+<li class="sub"><a href="pump.html">PUMP</a></li>
+<li class="sub"><a href="comp.html">COMP</a></li>
 <li class="top"><a href="advanced.html">8 Advanced</a></li>
 <li class="top here"><a href="changelog.html">Changes</a></li>
 </ul></nav>
 <main>
 <h1>Changes</h1>
 
-<h2>Build 2</h2>
-<p><b>Note:</b> this build is a fresh start. Projects, sounds and settings from the first beta do not carry over.</p>
+<h2>0.2 (13)</h2>
+<h3>Changes</h3>
+<ul>
+<li>Every knob is a solid disc with a pointer. DIAL VALUES ON on the OTHER page shows its value, 0 to 100, inside it.</li>
+<li>The navigation column, PREV, UP and NEXT, is on every page. UP is no longer at the top left.</li>
+<li>Each part tile on the main page shows its sound number.</li>
+<li>SOUNDS: two columns, eight slots to a page. The slot number is the save button, and it asks SURE? on a filled slot. Tap the name to load.</li>
+<li>Sampler: the machine name is centred in the header and opens the machine picker. GRAIN has the six-dial box (VOLUME, ATTACK, DECAY, BITS, RATE, DRIVE) and the modes GRANULAR, SINGLE CYCLE and LONG SAMPLE. SLICE has ENV RESET on its filter and no MODE page.</li>
+<li>HEAT: the DJ EQ has full-size knobs and a RESET. The LOOPER SPACE knobs match the rest.</li>
+<li>HOLY_ACID has a WAVE selector with 64 waves.</li>
+</ul>
+
+<h2>0.2</h2>
+<p><b>Note:</b> this version is a fresh start. Projects, sounds and settings from the first beta do not carry over.</p>
 <h3>New</h3>
 <ul>
-<li>SAMPLER engine with four machines: KIT (16 pads), GRAIN, STRETCH and SLICE.</li>
+<li>SAMPLER engine with four machines: KIT (16 pads), GRAIN, STRETCH and SLICE. It replaces GRANULAR, which lives on as GRAIN.</li>
 <li>Lo-fi models for the sampler: SP, S950 and CRUSH.</li>
 <li>The sample browser loads samples from your phone, your recordings, or straight from the Digitakt.</li>
 <li>Skins: seven colourways in the settings.</li>
 <li>A welcome message on first launch.</li>
+<li>HOLY_DISK, the app's own sample disk, with a two-pane browser, zip files and Open in Holy Grail. See <a href="samples.html">Samples</a>.</li>
+<li><a href="pump.html">PUMP</a>: sidechain-style ducking on the mixer, in time with your Digitakt.</li>
+<li><a href="comp.html">COMP</a>: a master bus compressor.</li>
+<li>A needle meter for every mixer input.</li>
 </ul>
 <img src="img/sampler-machines.png" alt="The sampler's machines">
-<p>Two of the seven skins, PHOSPHOR and LCD:</p>
-<img src="img/skin-phosphor.png" alt="PHOSPHOR skin">
-<img src="img/skin-lcd.png" alt="LCD skin">
+<p>Seven skins recolour every screen; pick one in the settings.</p>
 <h3>You told us, we did it</h3>
 <ul>
 <li>"Letters are cut off", "the Dynamic Island blocks stuff". The app now scales to fit every iPhone, clear of the rounded corners and the notch.</li>
-<li>"The interface needs common ways to navigate", "how do I get back from browse?" BACK is top left on every screen. PREV and NEXT turn every page. No more swiping.</li>
+<li>"The interface needs common ways to navigate", "how do I get back from browse?" Every page has a navigation column at the right: PREV and NEXT turn the page and UP goes up a level. No more swiping.</li>
 <li>"CC mapping is lost when loading presets." Your CCs now belong to the project. Loading a sound never changes them.</li>
 <li>"It keeps listening to the microphone." It doesn't. The iPhone treats the Digitakt's USB audio as a microphone, so the app asks for microphone access the first time you connect it. The phone's own microphone is never used, unless you disconnect the USB and turn MIC on in the app.</li>
 <li>"The amp envelope on Synth One seems broken." It was. Synth One misread how the Digitakt ends a note, so notes never released. Fixed.</li>
@@ -55,8 +72,7 @@
 <li>"The looped Digitakt audio is really quiet." The input and looper levels are reworked. The Digitakt now loops at the level it plays.</li>
 <li>"Is there a manual?" You're reading it. The Digitakt II is confirmed working.</li>
 </ul>
-<p>One layout on every screen, scaled as large as it fits and kept clear of the notch and the Dynamic Island. Illustration:</p>
-<img src="img/screen-fit.png" alt="The same screen on a smaller iPhone and on an iPhone with a Dynamic Island">
+<p>One layout on every screen, scaled as large as it fits and kept clear of the notch and the Dynamic Island.</p>
 <h3>Other changes and fixes</h3>
 <ul>
 <li>Volume and gain staging improvements.</li>
@@ -64,11 +80,16 @@
 <li>Resetting the looper with a C note no longer changes the divider.</li>
 <li>Redesigned screens: one header size, new SOUNDS and BROWSE, a CC number picker, editable part channels.</li>
 <li>The master volume now starts at the right level.</li>
+<li>TB-303 is now <a href="holy-acid.html">HOLY_ACID</a>, with a second filter, CCCP, and a third oscillator, WAVE.</li>
+<li>The looper has its own channel on the mixer.</li>
+<li>The mixer opens from the MIXER box on the main page.</li>
+<li>HEAT fits on one page.</li>
+<li>On channel 16, CC 70 to 73 set the four synth volumes and CC 74 to 77 the HEAT EQ.</li>
+<li>Some Synth One settings were lost on a pattern change or a restart. Fixed.</li>
 </ul>
 <h2>Coming next</h2>
 <p>Plans, not promises:</p>
 <ul>
-<li>A master compressor.</li>
 <li>A limiter on each channel.</li>
 <li>Granular effects.</li>
 <li>We are considering a separate design for the iPad.</li>
