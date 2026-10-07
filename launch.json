@@ -1,10 +1,11 @@
 {
-  "id": "build2-welcome",
+  "id": "build15-welcome",
   "pages": [
-    "Welcome to the quest for the ultimate e-companion. Please set your Elektron Box to USB/MIDI (switch Overbridge off).",
-    "MIDI channels 9-16 control the instrument and FX slots by default. CC 70-77 control whatever you like. You can change this in the settings.",
-    "I have now added a few sampler engines due to popular demand.",
-    "I made some changes to the layouts so they look better on different phones. We have different skins now in the settings.",
-    "Please send me feedback with SEND LOG on the settings page. The quest needs it."
+    "Welcome to HOLY_GRAIL, the Quest for the Ultimate E-Companion.",
+    "This is a big update: we now have 4 Samplers, a master compressor and a PUMP engine.",
+    "The WIKI docs explain everything. The app now works on iPhone, iPad and Apple Silicon Macs as well.",
+    "The way the looper sounds needs a bit more work, but it should be better than the last version.",
+    "Please send me a message on how it works for you with SEND LOG on the settings page! The quest needs it!",
+    "If you use anything other than the Digitakt, please let me know how it works! Syntakts, Digitones! Excited to hear from you!"
   ]
 }
