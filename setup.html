@@ -59,27 +59,10 @@ CLOCK SEND: ON. TRANSPORT SEND: ON. PROG CH SEND: ON.</li>
 OUTPUT TO: USB or MIDI+USB</li>
 <li><strong>SETTINGS &gt; AUDIO ROUTING</strong>
 INT TO USB: ON. USB TO MAIN: ON. INT TO MAIN: ON.</li>
-<li><strong>Connect the cable</strong>
-Plug the box into the phone, then open Holy Grail. On Android the phone offers to open Holy Grail for the box: accept, and allow it to use the USB device.</li>
-<li><strong>Box: point MIDI tracks at the app</strong>
-Set a MIDI track on the box to channel 9 to play part 1, and 10, 11 and 12 for parts 2 to 4. Play a note on that track: the part sounds. The channels can be changed, see <a href="parts.html">Parts and engines</a>.</li>
-<li><strong>Press PLAY on the box</strong>
-The app starts with the box and runs at its tempo. Setup is done.</li>
+<li><strong>Connect the cable</strong></li>
+<li><strong>Box: point MIDI tracks at the app</strong></li>
+<li><strong>Press PLAY on the box</strong></li>
 </ol>
-<h2 id="shows">What the app shows</h2>
-<figure class="screen"><img src="img/status-connected.png" alt="Plugging in shows the box&#x27;s name." width="1314" height="588" loading="lazy"><figcaption>Plugging in shows the box's name.</figcaption></figure>
-<p>When the cable or a MIDI source appears, the app asks the box who it is. The name comes from the box's answer, never from the name of the USB port. The connection box on the setup page, and the banner when you plug in, show one of these.</p>
-<div class="scroll"><table>
-<tr><th>Shown</th><th>Meaning</th><th>What to do</th></tr>
-<tr><td>The box's name and CONNECTED, for example SYNTAKT CONNECTED</td><td>USB audio is on and the box is known.</td><td>Nothing. It works.</td></tr>
-<tr><td>CONTROLLER CONNECTED</td><td>USB audio is on, but the box did not answer or the app does not know it.</td><td>You can play. Box features such as PULL PROJECT are not offered.</td></tr>
-<tr><td>The box's name and SET USB TO AUDIO/MIDI</td><td>The box answered, but it sends no USB audio.</td><td>Do step 1 of the checklist.</td></tr>
-<tr><td>The box's name and NO MIDI CLOCK</td><td>No MIDI clock arrived within two seconds of the box being found.</td><td>Do step 2 of the checklist.</td></tr>
-<tr><td>DISCONNECTED</td><td>Nothing is plugged in, or the phone does not see the box.</td><td>Check the cable. On Android, see below.</td></tr>
-</table></div>
-<figure class="screen"><img src="img/status-warning-usb.png" alt="The USB warning." width="1314" height="588" loading="lazy"><figcaption>The USB warning.</figcaption></figure>
-<figure class="screen"><img src="img/status-warning-clock.png" alt="The clock warning." width="1314" height="588" loading="lazy"><figcaption>The clock warning.</figcaption></figure>
-<p>A warning stays until its cause is fixed or the box is unplugged. If both apply, the USB warning shows first. The app checks nothing else about the box's settings.</p>
 <h2 id="android">Android only</h2>
 <ul>
 <li>On some phones, OnePlus among them, the USB-C port stays idle until OTG connection is turned on in the phone's settings. Until then the box is not seen at all.</li>
