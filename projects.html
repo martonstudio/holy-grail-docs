@@ -3,39 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Holy Grail - Projects</title>
+<title>Projects - Holy Grail docs</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="side"><ul>
-<li class="top"><a href="index.html">Home</a></li>
-<li class="top"><a href="setup.html">1 Setup</a></li>
-<li class="top"><a href="main-page.html">2 Main page</a></li>
-<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li class="top"><a href="sounds.html">4 Sounds</a></li>
-<li class="top here"><a href="projects.html">5 Projects</a></li>
-<li class="top"><a href="engines.html">6 Synths and effects</a></li>
-<li class="sub"><a href="synth-one.html">Synth One</a></li>
-<li class="sub"><a href="holy-acid.html">HOLY_ACID</a></li>
-<li class="sub"><a href="fm.html">FM</a></li>
-<li class="sub"><a href="sampler.html">Sampler</a></li>
-<li class="sub"><a href="samples.html">Samples</a></li>
-<li class="sub"><a href="effects.html">Effects</a></li>
-<li class="sub"><a href="looper.html">Looper</a></li>
-<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li class="sub"><a href="pump.html">PUMP</a></li>
-<li class="sub"><a href="comp.html">COMP</a></li>
-<li class="top"><a href="advanced.html">8 Advanced</a></li>
-<li class="top"><a href="changelog.html">Changes</a></li>
+<header class="bar"><button id="menu" aria-expanded="false" aria-controls="side">MENU</button><a class="home" href="index.html">Holy Grail docs</a><div class="pager"><a class="prev" rel="prev" href="main-page.html"><span>&larr;</span> Main page</a><a class="next" rel="next" href="synth-one.html">SYNTH ONE <span>&rarr;</span></a></div></header>
+<nav class="side" id="side"><a class="home" href="index.html">Holy Grail docs</a><ul>
+<li class="group">Start</li>
+<li><a href="index.html">Welcome</a></li>
+<li><a href="setup.html">First setup</a></li>
+<li><a href="main-page.html">Main page</a></li>
+<li class="here"><a href="projects.html">Projects</a></li>
+<li class="group">Synths</li>
+<li><a href="synth-one.html">SYNTH ONE</a></li>
+<li><a href="holy-acid.html">HOLY_ACID</a></li>
+<li><a href="holy-dex.html">HOLY_DEX</a></li>
+<li class="group">Samplers</li>
+<li><a href="holy-kit.html">HOLY_KIT</a></li>
+<li><a href="holy-grain.html">HOLY_GRAIN</a></li>
+<li><a href="holy-stretch.html">HOLY_STRETCH</a></li>
+<li><a href="holy-slice.html">HOLY_SLICE</a></li>
+<li><a href="samples.html">HOLY_DISK</a></li>
+<li><a href="sounds.html">Sound presets</a></li>
+<li class="group">Looper, effects, mixer</li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="space.html">SPACE</a></li>
+<li><a href="drive.html">DRIVE</a></li>
+<li><a href="mixer.html">Mixer</a></li>
+<li><a href="comp.html">COMP</a></li>
+<li class="group">Recorder</li>
+<li><a href="recorder.html">Recorder</a></li>
+<li class="group">Settings and advanced</li>
+<li><a href="parts.html">Parts and engines</a></li>
+<li><a href="knobs.html">Knobs and CCs</a></li>
+<li><a href="preferences.html">Preferences</a></li>
+<li><a href="boxes.html">Boxes</a></li>
+<li><a href="changelog.html">Changes</a></li>
 </ul></nav>
 <main>
-<h1>5 Projects</h1>
-<p>Projects work like on the Elektron boxes. Create, save, load. Load without saving and you lose your changes. A project carries the samples of its sounds.</p>
-<img src="img/project.png" alt="The PROJECT list">
-<p>Open PROJECT on the setup page.</p>
-<h2>Patterns</h2>
-<p>A new project comes with all its patterns, like on the Elektron boxes. The app follows your pattern changes. A pattern remembers everything except the looper, even after you restart the app. You can copy and paste patterns on the setup page.</p>
-<div class="pager"><a href="sounds.html">&larr; 4 Sounds</a><a href="engines.html">6 Synths and effects &rarr;</a></div>
+<div class="top"><div class="pager"><a class="prev" rel="prev" href="main-page.html"><span>&larr;</span> Main page</a><a class="next" rel="next" href="synth-one.html">SYNTH ONE <span>&rarr;</span></a></div></div>
+<h1>Projects</h1>
+<figure class="screen"><img src="img/state-project.png" alt="The project page." width="1314" height="588" loading="lazy"><figcaption>The project page.</figcaption></figure>
+<p>This is where you save and load your projects. Open it with PROJECT on the setup page.</p>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>The list</td><td>Tap a project to select it. OPEN marks the project that is open.</td></tr>
+<tr><td>SAVE</td><td>Saves your work into the selected project. Asks SURE? first.</td></tr>
+<tr><td>LOAD</td><td>Opens the selected project. Unsaved work is lost. Asks SURE? first.</td></tr>
+<tr><td>NEW</td><td>Makes a new project and asks for its name.</td></tr>
+<tr><td>SHARE</td><td>Sends the open project's saved file.</td></tr>
+</table>
+<p>The app keeps your work as you go, so it opens where you left it without saving.</p>
+
+<div class="pager"><a class="prev" rel="prev" href="main-page.html"><span>&larr;</span> Main page</a><a class="next" rel="next" href="synth-one.html">SYNTH ONE <span>&rarr;</span></a></div>
 </main>
+<script src="nav.js"></script>
 </body>
 </html>

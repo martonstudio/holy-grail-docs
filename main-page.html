@@ -3,47 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Holy Grail - The main page</title>
+<title>The main page - Holy Grail docs</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="side"><ul>
-<li class="top"><a href="index.html">Home</a></li>
-<li class="top"><a href="setup.html">1 Setup</a></li>
-<li class="top here"><a href="main-page.html">2 Main page</a></li>
-<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li class="top"><a href="sounds.html">4 Sounds</a></li>
-<li class="top"><a href="projects.html">5 Projects</a></li>
-<li class="top"><a href="engines.html">6 Synths and effects</a></li>
-<li class="sub"><a href="synth-one.html">Synth One</a></li>
-<li class="sub"><a href="holy-acid.html">HOLY_ACID</a></li>
-<li class="sub"><a href="fm.html">FM</a></li>
-<li class="sub"><a href="sampler.html">Sampler</a></li>
-<li class="sub"><a href="samples.html">Samples</a></li>
-<li class="sub"><a href="effects.html">Effects</a></li>
-<li class="sub"><a href="looper.html">Looper</a></li>
-<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li class="sub"><a href="pump.html">PUMP</a></li>
-<li class="sub"><a href="comp.html">COMP</a></li>
-<li class="top"><a href="advanced.html">8 Advanced</a></li>
-<li class="top"><a href="changelog.html">Changes</a></li>
+<header class="bar"><button id="menu" aria-expanded="false" aria-controls="side">MENU</button><a class="home" href="index.html">Holy Grail docs</a><div class="pager"><a class="prev" rel="prev" href="setup.html"><span>&larr;</span> First setup</a><a class="next" rel="next" href="projects.html">Projects <span>&rarr;</span></a></div></header>
+<nav class="side" id="side"><a class="home" href="index.html">Holy Grail docs</a><ul>
+<li class="group">Start</li>
+<li><a href="index.html">Welcome</a></li>
+<li><a href="setup.html">First setup</a></li>
+<li class="here"><a href="main-page.html">Main page</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li class="group">Synths</li>
+<li><a href="synth-one.html">SYNTH ONE</a></li>
+<li><a href="holy-acid.html">HOLY_ACID</a></li>
+<li><a href="holy-dex.html">HOLY_DEX</a></li>
+<li class="group">Samplers</li>
+<li><a href="holy-kit.html">HOLY_KIT</a></li>
+<li><a href="holy-grain.html">HOLY_GRAIN</a></li>
+<li><a href="holy-stretch.html">HOLY_STRETCH</a></li>
+<li><a href="holy-slice.html">HOLY_SLICE</a></li>
+<li><a href="samples.html">HOLY_DISK</a></li>
+<li><a href="sounds.html">Sound presets</a></li>
+<li class="group">Looper, effects, mixer</li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="space.html">SPACE</a></li>
+<li><a href="drive.html">DRIVE</a></li>
+<li><a href="mixer.html">Mixer</a></li>
+<li><a href="comp.html">COMP</a></li>
+<li class="group">Recorder</li>
+<li><a href="recorder.html">Recorder</a></li>
+<li class="group">Settings and advanced</li>
+<li><a href="parts.html">Parts and engines</a></li>
+<li><a href="knobs.html">Knobs and CCs</a></li>
+<li><a href="preferences.html">Preferences</a></li>
+<li><a href="boxes.html">Boxes</a></li>
+<li><a href="changelog.html">Changes</a></li>
 </ul></nav>
 <main>
-<h1>2 The main page</h1>
-<p>Use your Digitakt as you always do. The app plays along.</p>
-<img src="img/main-page.png" alt="The main page">
-<p>The top row is your four synths. Each tile shows the number of the sound it is playing above its name. Tap a tile to open the synth. Hold it to mute it.</p>
-<p>The bottom row is the looper, SPACE and DRIVE. Tap one to open it. Hold it to bypass it. The last box, MIXER, opens the mixer.</p>
-<p>Every page has the navigation column at the right. PREV and NEXT turn to the neighbouring page, and UP goes one level up. A button is greyed where there is nowhere to go. There are three main pages: this one, setup and recorder.</p>
-<h2 id="channels">Channels</h2>
+<div class="top"><div class="pager"><a class="prev" rel="prev" href="setup.html"><span>&larr;</span> First setup</a><a class="next" rel="next" href="projects.html">Projects <span>&rarr;</span></a></div></div>
+<h1>The main page</h1>
+<figure class="screen"><img src="img/state-main-grid-play.png" alt="The main page." width="1314" height="588" loading="lazy"><figcaption>The main page.</figcaption></figure>
+<p>The main page shows the app's eight boxes. Tap a box to open it. Hold a box to switch it off or on.</p>
 <table>
-<tr><th>Channel</th><th>Box</th></tr>
-<tr><td>9 to 12</td><td>Synths 1 to 4</td></tr>
-<tr><td>13 to 16</td><td>LOOPER, SPACE, DRIVE, HEAT</td></tr>
+<tr><th>Box</th><th>What it is</th></tr>
+<tr><td>Top row, 1 to 4</td><td>The four parts, on channels 9 to 12. Each runs one synth or sampler. The header shows the channel and the sound number, and the name under the picture is the sound. See <a href="parts.html">Parts and engines</a>.</td></tr>
+<tr><td>LOOP</td><td>The looper, on channel 13. See <a href="looper.html">Looper</a>.</td></tr>
+<tr><td>DRIVE</td><td>Distortion, on channel 14. See <a href="drive.html">DRIVE</a>.</td></tr>
+<tr><td>SPACE</td><td>Delay and reverb, on channel 15. See <a href="space.html">SPACE</a>.</td></tr>
+<tr><td>MIXER</td><td>The mixer, on channel 16, with the playing pattern under it. See <a href="mixer.html">Mixer</a>.</td></tr>
 </table>
-<p>Play a synth from a Digitakt MIDI track on its channel. Program Change loads a sound.</p>
-<p>The playing pattern shows in the bottom right corner. It stays in sync with your Elektron sequencer when transport and program change are on in the box's MIDI settings.</p>
-<div class="pager"><a href="setup.html">&larr; 1 Setup</a><a href="synths-ccs.html">3 Synths and CCs &rarr;</a></div>
+
+<div class="pager"><a class="prev" rel="prev" href="setup.html"><span>&larr;</span> First setup</a><a class="next" rel="next" href="projects.html">Projects <span>&rarr;</span></a></div>
 </main>
+<script src="nav.js"></script>
 </body>
 </html>

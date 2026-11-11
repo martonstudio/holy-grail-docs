@@ -3,46 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Holy Grail - Setup</title>
+<title>First setup - Holy Grail docs</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="side"><ul>
-<li class="top"><a href="index.html">Home</a></li>
-<li class="top here"><a href="setup.html">1 Setup</a></li>
-<li class="top"><a href="main-page.html">2 Main page</a></li>
-<li class="top"><a href="synths-ccs.html">3 Synths and CCs</a></li>
-<li class="top"><a href="sounds.html">4 Sounds</a></li>
-<li class="top"><a href="projects.html">5 Projects</a></li>
-<li class="top"><a href="engines.html">6 Synths and effects</a></li>
-<li class="sub"><a href="synth-one.html">Synth One</a></li>
-<li class="sub"><a href="holy-acid.html">HOLY_ACID</a></li>
-<li class="sub"><a href="fm.html">FM</a></li>
-<li class="sub"><a href="sampler.html">Sampler</a></li>
-<li class="sub"><a href="samples.html">Samples</a></li>
-<li class="sub"><a href="effects.html">Effects</a></li>
-<li class="sub"><a href="looper.html">Looper</a></li>
-<li class="top"><a href="recorder-mixer.html">7 Recorder and mixer</a></li>
-<li class="sub"><a href="pump.html">PUMP</a></li>
-<li class="sub"><a href="comp.html">COMP</a></li>
-<li class="top"><a href="advanced.html">8 Advanced</a></li>
-<li class="top"><a href="changelog.html">Changes</a></li>
+<header class="bar"><button id="menu" aria-expanded="false" aria-controls="side">MENU</button><a class="home" href="index.html">Holy Grail docs</a><div class="pager"><a class="prev" rel="prev" href="index.html"><span>&larr;</span> Welcome</a><a class="next" rel="next" href="main-page.html">Main page <span>&rarr;</span></a></div></header>
+<nav class="side" id="side"><a class="home" href="index.html">Holy Grail docs</a><ul>
+<li class="group">Start</li>
+<li><a href="index.html">Welcome</a></li>
+<li class="here"><a href="setup.html">First setup</a></li>
+<li><a href="main-page.html">Main page</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li class="group">Synths</li>
+<li><a href="synth-one.html">SYNTH ONE</a></li>
+<li><a href="holy-acid.html">HOLY_ACID</a></li>
+<li><a href="holy-dex.html">HOLY_DEX</a></li>
+<li class="group">Samplers</li>
+<li><a href="holy-kit.html">HOLY_KIT</a></li>
+<li><a href="holy-grain.html">HOLY_GRAIN</a></li>
+<li><a href="holy-stretch.html">HOLY_STRETCH</a></li>
+<li><a href="holy-slice.html">HOLY_SLICE</a></li>
+<li><a href="samples.html">HOLY_DISK</a></li>
+<li><a href="sounds.html">Sound presets</a></li>
+<li class="group">Looper, effects, mixer</li>
+<li><a href="looper.html">Looper</a></li>
+<li><a href="space.html">SPACE</a></li>
+<li><a href="drive.html">DRIVE</a></li>
+<li><a href="mixer.html">Mixer</a></li>
+<li><a href="comp.html">COMP</a></li>
+<li class="group">Recorder</li>
+<li><a href="recorder.html">Recorder</a></li>
+<li class="group">Settings and advanced</li>
+<li><a href="parts.html">Parts and engines</a></li>
+<li><a href="knobs.html">Knobs and CCs</a></li>
+<li><a href="preferences.html">Preferences</a></li>
+<li><a href="boxes.html">Boxes</a></li>
+<li><a href="changelog.html">Changes</a></li>
 </ul></nav>
 <main>
-<h1>1 Setup</h1>
-<img src="img/welcome.png" alt="The welcome message">
-<p>Holy Grail is an e-companion app for compatible Elektron boxes. It adds four synths, samplers, effects, a looper, and an audio and video recorder to your box. You can also route your box through the iPhone, so it plays out of Bluetooth headphones or speakers.</p>
-<h2>Connect</h2>
-<p>One USB cable does everything, audio and MIDI. A newer iPhone takes a USB-C to USB-B cable, the printer kind. An older iPhone takes a Lightning to USB adapter. The official Apple one works best.</p>
-<p>Tested on the Digitakt and the Digitakt II. Other boxes are not confirmed yet. If yours works well with the app, please send me a message. You need iOS 18 or later.</p>
-<h2>Digitakt settings</h2>
-<ol>
-<li>AUDIO: USB+MIDI mode. Overbridge off.</li>
-<li>INT TO USB: ON.</li>
-<li>INT TO MAIN: OFF for routing A, ON for routing B. B is the default. See <a href="advanced.html#routing">Advanced</a>.</li>
+<div class="top"><div class="pager"><a class="prev" rel="prev" href="index.html"><span>&larr;</span> Welcome</a><a class="next" rel="next" href="main-page.html">Main page <span>&rarr;</span></a></div></div>
+<h1>First setup</h1>
+<p>Do this once. When every step is done, the box plays the app's synths, the app follows the box's tempo and patterns, and you hear both from the box's outputs.</p>
+<h2 id="need">What you need</h2>
+<table>
+<tr><th></th><th>iOS</th><th>Android</th></tr>
+<tr><td>System</td><td>iOS 17 or later</td><td>Android 8.1 or later, on a phone that allows USB host</td></tr>
+<tr><td>Cable</td><td>USB-C to USB-B, the printer kind. An older iPhone or iPad takes a Lightning to USB adapter; Apple's Lightning to USB Camera Adapter works best.</td><td>USB-C to USB-B, the printer kind.</td></tr>
+</table>
+<p>The cable must carry data. A charging-only cable powers nothing and connects nothing.</p>
+<h2 id="checklist">Setup checklist</h2>
+<ol class="check">
+<li><strong>Box: set USB to audio and MIDI</strong>
+In the box's USB settings choose USB AUDIO/MIDI. Overbridge mode must be off. Without this the app gets MIDI but no sound, and shows SET USB TO AUDIO/MIDI.</li>
+<li><strong>Box: send clock, transport and program change</strong>
+In the box's MIDI sync settings set CLOCK SEND, TRANSPORT SEND and PRG CH SEND to ON. Clock keeps the looper and the synced effects in time. Transport starts and stops the app with the box. Program change makes the app follow the box's pattern changes.</li>
+<li><strong>Box: send MIDI over USB</strong>
+In the box's MIDI port settings, MIDI output must go to USB, or to MIDI and USB.</li>
+<li><strong>Box: audio routing</strong>
+INT TO USB: ON. USB TO MAIN: ON. INT TO MAIN: ON. This fits the app's default output, USB APP: the box plays as normal and the app is added on top. If the looper is too quiet, set USB TO MAIN to +6 dB. The other outputs are in <a href="preferences.html">Preferences</a>.</li>
+<li><strong>Connect the cable</strong>
+Plug the box into the phone, then open Holy Grail. On Android the phone offers to open Holy Grail for the box: accept, and allow it to use the USB device.</li>
+<li><strong>Check the connection box</strong>
+Go to the setup page of the app. The box at the top should show your box's name and CONNECTED. If it shows anything else, see <a href="#shows">What the app shows</a> below.</li>
+<li><strong>Box: point MIDI tracks at the app</strong>
+Set a MIDI track on the box to channel 9 to play part 1, and 10, 11 and 12 for parts 2 to 4. Play a note on that track: the part sounds. The channels can be changed, see <a href="parts.html">Parts and engines</a>.</li>
+<li><strong>Press PLAY on the box</strong>
+The app starts with the box and runs at its tempo. Setup is done.</li>
 </ol>
-<p>The app listens on MIDI channels 9 to 16. See <a href="main-page.html#channels">the main page</a>.</p>
-<div class="pager"><a href="index.html">&larr; Home</a><a href="main-page.html">2 Main page &rarr;</a></div>
+<h2 id="shows">What the app shows</h2>
+<figure class="screen"><img src="img/status-connected.png" alt="Plugging in shows the box&#x27;s name." width="1314" height="588" loading="lazy"><figcaption>Plugging in shows the box's name.</figcaption></figure>
+<p>When the cable or a MIDI source appears, the app asks the box who it is. The name comes from the box's answer, never from the name of the USB port. The connection box on the setup page, and the banner when you plug in, show one of these.</p>
+<div class="scroll"><table>
+<tr><th>Shown</th><th>Meaning</th><th>What to do</th></tr>
+<tr><td>The box's name and CONNECTED, for example SYNTAKT CONNECTED</td><td>USB audio is on and the box is known.</td><td>Nothing. It works.</td></tr>
+<tr><td>CONTROLLER CONNECTED</td><td>USB audio is on, but the box did not answer or the app does not know it.</td><td>You can play. Box features such as PULL PROJECT are not offered.</td></tr>
+<tr><td>The box's name and SET USB TO AUDIO/MIDI</td><td>The box answered, but it sends no USB audio.</td><td>Do step 1 of the checklist.</td></tr>
+<tr><td>The box's name and NO MIDI CLOCK</td><td>No MIDI clock arrived within two seconds of the box being found.</td><td>Do step 2 of the checklist.</td></tr>
+<tr><td>DISCONNECTED</td><td>Nothing is plugged in, or the phone does not see the box.</td><td>Check the cable. On Android, see below.</td></tr>
+</table></div>
+<figure class="screen"><img src="img/status-warning-usb.png" alt="The USB warning." width="1314" height="588" loading="lazy"><figcaption>The USB warning.</figcaption></figure>
+<figure class="screen"><img src="img/status-warning-clock.png" alt="The clock warning." width="1314" height="588" loading="lazy"><figcaption>The clock warning.</figcaption></figure>
+<p>A warning stays until its cause is fixed or the box is unplugged. If both apply, the USB warning shows first. The app checks nothing else about the box's settings.</p>
+<h2 id="android">Android only</h2>
+<ul>
+<li>On some phones, OnePlus among them, the USB-C port stays idle until OTG connection is turned on in the phone's settings. Until then the box is not seen at all.</li>
+<li>If you refused when Android offered to open Holy Grail, unplug the box, plug it in again, accept and allow USB access.</li>
+<li>The Android app has no video recorder and reads WAV samples only.</li>
+</ul>
+<h2 id="nobox">No box yet?</h2>
+<p>With no box connected the app opens and every screen works, and it plays through the phone's speaker or headphones. The app's own sequencer is a developer function.</p>
+
+<div class="pager"><a class="prev" rel="prev" href="index.html"><span>&larr;</span> Welcome</a><a class="next" rel="next" href="main-page.html">Main page <span>&rarr;</span></a></div>
 </main>
+<script src="nav.js"></script>
 </body>
 </html>
