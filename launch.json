@@ -1,11 +1,11 @@
 {
-  "id": "build15-welcome",
+  "id": "build-0450",
   "pages": [
-    "Welcome to HOLY_GRAIL, the Quest for the Ultimate E-Companion.",
-    "This is a big update: we now have 4 Samplers, a master compressor and a PUMP engine.",
-    "The WIKI docs explain everything. The app now works on iPhone, iPad and Apple Silicon Macs as well.",
-    "The way the looper sounds needs a bit more work, but it should be better than the last version.",
-    "Please send me a message on how it works for you with SEND LOG on the settings page! The quest needs it!",
-    "If you use anything other than the Digitakt, please let me know how it works! Syntakts, Digitones! Excited to hear from you!"
+    "Welcome to the quest for the ultimate e-companion. Please set your box to USB/MIDI (switch Overbridge off).",
+    "Make sure ‘send clock, transport and PC are ON in the midi sync settings otherwise the looper, arp and delay won’t work.",
+    "MIDI channels 9-16 and CC70-77 control the parts by default. You can change this in the settings.",
+    "New engines, Sidechain emulator, Ipad layout, different colour ways and skins.",
+    "Lots of new things in this version. No feedback left unturned, thank you for all your input!",
+    "Please send the ravens, join the Discord, get in touch. The quest needs it."
   ]
 }
