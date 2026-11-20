@@ -1,9 +1,10 @@
 {
-  "id": "build-0450",
+  "id": "build-0460",
   "pages": [
     "Welcome to the quest for the ultimate e-companion. Please set your box to USB/MIDI (switch Overbridge off).",
     "Make sure ‘send clock, transport and PC are ON in the midi sync settings otherwise the looper, arp and delay won’t work.",
     "MIDI channels 9-16 and CC70-77 control the parts by default. You can change this in the settings.",
+    "If the app's volume is a bit too quiet, you can adjust 'USB TO MAIN' in the hardware's audio settings.",
     "New engines, Sidechain emulator, Ipad layout, different colour ways and skins.",
     "Lots of new things in this version. No feedback left unturned, thank you for all your input!",
     "Please send the ravens, join the Discord, get in touch. The quest needs it."
